@@ -1,1 +1,591 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>ملف إنجاز مرح أحمد محمد أبو الطرابيش</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Tahoma, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+            line-height: 1.8;
+        }
+
+        /* شريط التنقل */
+        nav {
+            background: #111827;
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        /* الصفحة الرئيسية */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #111827, #1e3a5f);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #bfdbfe;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e5e7eb;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        /* الأقسام */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+            margin-bottom: 25px;
+        }
+
+        .card h3 {
+            color: #1d4ed8;
+            margin-bottom: 15px;
+        }
+
+        /* البيانات */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .info-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .info-box strong {
+            display: block;
+            color: #1d4ed8;
+            margin-bottom: 5px;
+        }
+
+        /* البنود */
+        .items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .item h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .item p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* التذييل */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            color: #d1d5db;
+        }
+
+        /* الموبايل */
+        @media (max-width: 800px) {
+
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .info-grid,
+            .items {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <div class="nav-container">
+
+            <a href="#home" class="logo">ملف إنجازي</a>
+
+            <div class="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">نبذة عني</a>
+                <a href="#training">جهة التدريب</a>
+                <a href="#plan">خطة التدريب</a>
+                <a href="#reports">التقارير</a>
+                <a href="#projects">المشاريع</a>
+                <a href="#skills">المهارات</a>
+                <a href="#contact">الخاتمة</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- الصفحة الرئيسية -->
+    <header class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>مرح أحمد محمد أبو الطرابيش</h1>
+
+            <h2>ملف الإنجاز الأكاديمي والتدريب الميداني</h2>
+
+            <p>
+                طالبة علم الحاسوب – تكنولوجيا معلومات تطبيقية
+                <br>
+                جامعة الأقصى | 2026
+            </p>
+
+            <a href="#about" class="btn">
+                استكشاف ملف الإنجاز
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- نبذة عني -->
+    <section id="about">
+
+        <div class="section-title">
+            <h2>👩‍💻 نبذة عني</h2>
+            <p>تعريف مختصر عن الطالبة ومسيرتها الأكاديمية</p>
+        </div>
+
+        <div class="card">
+
+            <h3>مرحبًا بكم في ملف إنجازي</h3>
+
+            <p>
+                أنا مرح أحمد محمد أبو الطرابيش، طالبة في تخصص علم الحاسوب
+                – تكنولوجيا معلومات تطبيقية في جامعة الأقصى.
+                أقدم من خلال هذا الموقع ملف إنجازي الأكاديمي والتدريب الميداني،
+                وما يتضمنه من خطط وتقارير ومشاريع ومهارات تم اكتسابها خلال فترة التدريب.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- البيانات الشخصية -->
+    <section>
+
+        <div class="section-title">
+            <h2>📋 البيانات الأساسية</h2>
+        </div>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <strong>الاسم</strong>
+                مرح أحمد محمد أبو الطرابيش
+            </div>
+
+            <div class="info-box">
+                <strong>التخصص</strong>
+                علم الحاسوب – تكنولوجيا معلومات تطبيقية
+            </div>
+
+            <div class="info-box">
+                <strong>الجامعة</strong>
+                جامعة الأقصى
+            </div>
+
+            <div class="info-box">
+                <strong>سنة التدريب</strong>
+                2026
+            </div>
+
+            <div class="info-box">
+                <strong>بداية التدريب</strong>
+                2/9/2026
+            </div>
+
+            <div class="info-box">
+                <strong>جهة التدريب</strong>
+                مركز فلسطين للصدمة – بريطانيا
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- جهة التدريب -->
+    <section id="training">
+
+        <div class="section-title">
+            <h2>🏢 جهة التدريب</h2>
+            <p>معلومات عن مكان التدريب وطبيعته</p>
+        </div>
+
+        <div class="card">
+
+            <h3>مركز فلسطين للصدمة – بريطانيا</h3>
+
+            <p>
+                يمثل مركز التدريب البيئة العملية التي يتم من خلالها تطبيق
+                المعارف والمهارات الأكاديمية في مجال تكنولوجيا المعلومات
+                والحاسوب، وربط الجانب النظري بالتطبيق العملي.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- خطة التدريب -->
+    <section id="plan">
+
+        <div class="section-title">
+            <h2>📅 خطة التدريب</h2>
+            <p>الأهداف والمهام التي سيتم تنفيذها خلال فترة التدريب</p>
+        </div>
+
+        <div class="card">
+
+            <h3>أهداف التدريب</h3>
+
+            <ul>
+                <li>تطبيق المعارف الأكاديمية في بيئة عملية.</li>
+                <li>تطوير المهارات التقنية والبرمجية.</li>
+                <li>التعرف على بيئة العمل الاحترافية.</li>
+                <li>تنفيذ مشاريع وتطبيقات عملية.</li>
+                <li>تطوير مهارات حل المشكلات والعمل الجماعي.</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- التقارير -->
+    <section id="reports">
+
+        <div class="section-title">
+            <h2>📝 التقارير الدورية</h2>
+            <p>سيتم إضافة التقارير تباعًا خلال فترة التدريب</p>
+        </div>
+
+        <div class="card">
+
+            <h3>التقرير الأول</h3>
+
+            <p>
+                سيتم إضافة تفاصيل التقرير الأول هنا بعد إنجاز المرحلة
+                الأولى من التدريب.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- المشاريع -->
+    <section id="projects">
+
+        <div class="section-title">
+            <h2>💻 المشاريع العملية</h2>
+            <p>المشاريع والتطبيقات التي سيتم تنفيذها خلال التدريب</p>
+        </div>
+
+        <div class="items">
+
+            <div class="item">
+                <div class="icon">💻</div>
+                <h3>المشروع الأول</h3>
+                <p>سيتم إضافة المشروع وشرح تفاصيله هنا.</p>
+            </div>
+
+            <div class="item">
+                <div class="icon">🌐</div>
+                <h3>المشروع الثاني</h3>
+                <p>سيتم إضافة المشروع وشرح تفاصيله هنا.</p>
+            </div>
+
+            <div class="item">
+                <div class="icon">⚙️</div>
+                <h3>المشروع الثالث</h3>
+                <p>سيتم إضافة المشروع وشرح تفاصيله هنا.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- المهارات -->
+    <section id="skills">
+
+        <div class="section-title">
+            <h2>🛠️ المهارات المكتسبة</h2>
+            <p>المهارات التي سيتم تطويرها وتوثيقها أثناء التدريب</p>
+        </div>
+
+        <div class="items">
+
+            <div class="item">
+                <div class="icon">💻</div>
+                <h3>البرمجة</h3>
+                <p>سيتم توثيق لغات وتقنيات البرمجة المستخدمة.</p>
+            </div>
+
+            <div class="item">
+                <div class="icon">🌐</div>
+                <h3>تطوير الويب</h3>
+                <p>HTML و CSS والتقنيات المرتبطة بها.</p>
+            </div>
+
+            <div class="item">
+                <div class="icon">🔧</div>
+                <h3>Git & GitHub</h3>
+                <p>إدارة المشاريع البرمجية وتتبع التعديلات.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- البنود الإضافية -->
+    <section>
+
+        <div class="section-title">
+            <h2>📚 محتويات ملف الإنجاز</h2>
+            <p>الأقسام التي سيتم استكمالها خلال فترة التدريب</p>
+        </div>
+
+        <div class="items">
+
+            <div class="item">
+                <div class="icon">📄</div>
+                <h3>السيرة الذاتية</h3>
+                <p>CV والسيرة الأكاديمية.</p>
+            </div>
+
+            <div class="item">
+                <div class="icon">👩‍💻</div>
+                <h3>عينات الأكواد</h3>
+                <p>نماذج من الأكواد والمشاريع.</p>
+            </div>
+
+            <div class="item">
+                <div class="icon">🎓</div>
+                <h3>الشهادات والدورات</h3>
+                <p>الشهادات والدورات التدريبية.</p>
+            </div>
+
+            <div class="item">
+                <div class="icon">⭐</div>
+                <h3>تقييم المشرف</h3>
+                <p>تقييم المشرف في نهاية التدريب.</p>
+            </div>
+
+            <div class="item">
+                <div class="icon">📸</div>
+                <h3>الصور والأدلة</h3>
+                <p>توثيق مراحل التدريب.</p>
+            </div>
+
+            <div class="item">
+                <div class="icon">📚</div>
+                <h3>المراجع والملاحق</h3>
+                <p>المراجع والملفات المرفقة.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- الخاتمة -->
+    <section id="contact">
+
+        <div class="section-title">
+            <h2>📝 الخاتمة والتوصيات</h2>
+        </div>
+
+        <div class="card">
+
+            <h3>الخاتمة</h3>
+
+            <p>
+                سيتم تحديث هذا القسم في نهاية فترة التدريب ليشمل
+                أهم النتائج والخبرات التي تم اكتسابها والتوصيات المستقبلية.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- التذييل -->
+    <footer>
+
+        <p>
+            © 2026 مرح أحمد محمد أبو الطرابيش
+        </p>
+
+        <p>
+            ملف الإنجاز الأكاديمي والتدريب الميداني
+        </p>
+
+    </footer>
+
+</body>
+  </html>
