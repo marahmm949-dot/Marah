@@ -733,51 +733,204 @@
     </ul>
 </section>
 
+<!-- مقدمة عن التدريب -->
+<section id="training-intro" class="training-intro">
 
-<!-- خطة التدريب -->
-<section id="training-plan">
-    <h2>📋 خطة التدريب</h2>
+    <div class="intro-header">
+        <div class="intro-icon">ℹ</div>
 
-    <h3>الأسبوع الأول: التعريف والتأسيس</h3>
-    <ul>
-        <li>التعرف على جهة التدريب وبيئة العمل.</li>
-        <li>التعرف على أساسيات تصميم واجهات المستخدم UI/UX.</li>
-        <li>التعرف على برنامج Figma وأدواته الأساسية.</li>
-        <li>التعرف على مبادئ تنسيق الألوان والخطوط والعناصر.</li>
-    </ul>
+        <h2>مقدمة عن التدريب</h2>
 
-    <h3>الأسبوع الثاني: تطبيق عملي</h3>
-    <ul>
-        <li>إنشاء واجهات أولية باستخدام Figma.</li>
-        <li>تصميم واجهة تسجيل الدخول وإدخال بيانات المستخدم.</li>
-        <li>تنظيم العناصر وتنسيق الواجهات.</li>
-        <li>التعرف على إنشاء Prototype وربط الواجهات معًا.</li>
-    </ul>
+        <p>نبذة مختصرة عن تجربة التدريب الميداني</p>
+    </div>
 
-    <h3>الأسبوع الثالث: تطوير الواجهات</h3>
-    <ul>
-        <li>تصميم واجهات إضافية للمشروع.</li>
-        <li>تطبيق مبادئ التناسق البصري في تصميم الواجهات.</li>
-        <li>تحسين توزيع العناصر والأزرار وحقول الإدخال.</li>
-        <li>مراجعة التصميم وتعديل الملاحظات.</li>
-    </ul>
+    <div class="intro-text">
+        أتاح لي التدريب الميداني فرصة تطبيق المعرفة الأكاديمية التي اكتسبتها خلال
+        دراستي الجامعية في تخصص علم الحاسوب ضمن بيئة عمل حقيقية، وساعدني خلال فترة
+        التدريب على تطوير مهاراتي العملية في تصميم واجهات المستخدم وتجربة المستخدم
+        باستخدام Figma، وتنظيم المشاريع ورفعها ومتابعتها باستخدام GitHub.
+    </div>
 
-    <h3>الأسبوع الرابع: تطوير النموذج الأولي</h3>
-    <ul>
-        <li>استكمال تصميم الواجهات وربطها باستخدام Prototype.</li>
-        <li>تحسين تجربة المستخدم وسهولة التنقل بين الواجهات.</li>
-        <li>مراجعة التصميم النهائي وإجراء التعديلات اللازمة.</li>
-        <li>تجهيز المشروع للعرض والتوثيق.</li>
-    </ul>
+    <!-- معلومات التدريب -->
+    <div class="training-stats">
+
+        <div class="training-stat">
+            <div class="stat-icon">💻</div>
+            <h3>تدريب عملي</h3>
+            <p>بيئة عمل حقيقية</p>
+        </div>
+
+        <div class="training-stat">
+            <div class="stat-icon">&lt;/&gt;</div>
+            <h3>تصميم UI/UX</h3>
+            <p>مجال التدريب</p>
+        </div>
+
+        <div class="training-stat">
+            <div class="stat-icon">◷</div>
+            <h3>120 ساعة</h3>
+            <p>إجمالي التدريب</p>
+        </div>
+
+    </div>
+
 </section>
 
-<section id="reports">
+
+<style>
+
+/* مقدمة التدريب */
+.training-intro {
+    direction: rtl;
+    background: #f1f7fc;
+    padding: 80px 7%;
+    text-align: center;
+}
+
+/* رأس القسم */
+.intro-header {
+    margin-bottom: 45px;
+}
+
+.intro-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    background: #e5f1fb;
+    color: #214e78;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.intro-header h2 {
+    color: #173f68;
+    font-size: 42px;
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+
+.intro-header p {
+    color: #7890aa;
+    font-size: 22px;
+    margin: 0;
+}
+
+/* النص */
+.intro-text {
+    max-width: 1100px;
+    margin: 0 auto 55px;
+
+    color: #355777;
+    font-size: 21px;
+    line-height: 2;
+
+    text-align: right;
+}
+
+/* بطاقة الإحصائيات */
+.training-stats {
+    max-width: 1200px;
+    margin: auto;
+
+    background: #ffffff;
+    border-radius: 25px;
+
+    padding: 35px 25px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+/* كل معلومة */
+.training-stat {
+    text-align: center;
+    padding: 15px;
+}
+
+.stat-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    background: #e8f3fc;
+    color: #28608e;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.training-stat h3 {
+    color: #173f68;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.training-stat p {
+    color: #7890aa;
+    font-size: 19px;
+    margin: 0;
+}
+
+
+/* الجوال */
+@media (max-width: 700px) {
+
+    .training-intro {
+        padding: 55px 20px;
+    }
+
+    .intro-header h2 {
+        font-size: 32px;
+    }
+
+    .intro-header p {
+        font-size: 18px;
+    }
+
+    .intro-text {
+        font-size: 17px;
+        line-height: 1.9;
+        text-align: right;
+    }
+
+    .training-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 25px 15px;
+    }
+
+    .training-stat {
+        padding: 20px;
+    }
+
+}
+
+</style>
+
+
+
     <h2>📑 التقارير الدورية</h2>
 
     <p>
         يتضمن هذا القسم توثيقًا للمهام والأنشطة التي تم تنفيذها خلال فترة
-        التدريب الميداني، بالإضافة إلى التحديات التي تم مواجهتها والحلول
-        التي تم اتباعها، وأهم الدروس والخبرات المكتسبة.
+        .التدريب الميداني، بالإضافة إلى التحديات التي تم مواجهتها والحلول التي تم اتباعها ، واهم الدروس والخبرات المكتسبة
     </p>
 
     <div class="item">
