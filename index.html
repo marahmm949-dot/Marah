@@ -2053,7 +2053,285 @@
 
 </style>
 
+<!-- المهارات والكفاءات -->
+<section id="skills" class="skills-section">
 
+    <div class="skills-header">
+
+        <div class="skills-icon">▥</div>
+
+        <h2>المهارات والكفاءات</h2>
+
+        <p>المهارات التي تم تطويرها خلال فترة التدريب</p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <!-- المهارة 1 -->
+        <div class="skill-card">
+            <div class="skill-top">
+                <h3>Figma</h3>
+                <span>متقدم</span>
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%;"></div>
+            </div>
+        </div>
+
+
+        <!-- المهارة 2 -->
+        <div class="skill-card">
+            <div class="skill-top">
+                <h3>تصميم UI/UX</h3>
+                <span>جيد جدًا</span>
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+        </div>
+
+
+        <!-- المهارة 3 -->
+        <div class="skill-card">
+            <div class="skill-top">
+                <h3>Prototype</h3>
+                <span>جيد جدًا</span>
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+        </div>
+
+
+        <!-- المهارة 4 -->
+        <div class="skill-card">
+            <div class="skill-top">
+                <h3>تصميم تجربة المستخدم</h3>
+                <span>جيد</span>
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 78%;"></div>
+            </div>
+        </div>
+
+
+        <!-- المهارة 5 -->
+        <div class="skill-card">
+            <div class="skill-top">
+                <h3>Git / GitHub</h3>
+                <span>جيد</span>
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%;"></div>
+            </div>
+        </div>
+
+
+        <!-- المهارة 6 -->
+        <div class="skill-card">
+            <div class="skill-top">
+                <h3>توثيق وتنظيم المشاريع</h3>
+                <span>جيد جدًا</span>
+            </div>
+
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%;"></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+/* =========================
+   المهارات والكفاءات
+========================= */
+
+.skills-section {
+    direction: rtl;
+    background: #f1f6fb;
+    padding: 80px 7%;
+}
+
+
+/* العنوان */
+
+.skills-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skills-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 22px;
+
+    background: #e5f0fa;
+    color: #24557f;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.skills-header h2 {
+    margin: 0 0 15px;
+
+    color: #173f68;
+
+    font-size: 42px;
+
+    font-weight: 700;
+}
+
+.skills-header p {
+    margin: 0;
+
+    color: #7b8da3;
+
+    font-size: 21px;
+}
+
+
+/* شبكة المهارات */
+
+.skills-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* بطاقة المهارة */
+
+.skill-card {
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 25px 28px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+    border: 1px solid #e5ebf2;
+}
+
+
+/* اسم المهارة والمستوى */
+
+.skill-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+.skill-top h3 {
+    margin: 0;
+
+    color: #263b50;
+
+    font-size: 19px;
+
+    font-weight: 600;
+}
+
+.skill-top span {
+    color: #7b8da3;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* شريط المهارة */
+
+.skill-bar {
+    width: 100%;
+
+    height: 7px;
+
+    background: #e5ebf1;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+
+    background: #37698f;
+
+    border-radius: 10px;
+}
+
+
+/* الجوال */
+
+@media (max-width: 800px) {
+
+    .skills-section {
+        padding: 55px 18px;
+    }
+
+    .skills-header h2 {
+        font-size: 34px;
+    }
+
+    .skills-header p {
+        font-size: 17px;
+
+        line-height: 1.8;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .skill-card {
+        padding: 23px;
+
+        border-radius: 20px;
+    }
+
+    .skill-top h3 {
+        font-size: 18px;
+    }
+
+}
+
+</style>
 
 
 
