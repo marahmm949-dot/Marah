@@ -2150,179 +2150,217 @@
 }
 </style>
 
-        
+   <!-- الأدلة والمرفقات -->
+<section id="evidence" class="evidence-section">
 
-
-    
-<!-- الأدلة والمرفقات -->
-<section id="attachments" class="attachments-section">
-
-    <div class="attachments-header">
-
-        <div class="attachments-icon">📎</div>
+    <div class="evidence-header">
+        <div class="evidence-icon">📎</div>
 
         <h2>الأدلة والمرفقات</h2>
 
-        <p>الأدلة التي تثبت تنفيذ المهام العملية خلال فترة التدريب</p>
+        <p>
+            الأدلة التي تثبت تنفيذ المهام العملية خلال فترة التدريب
+        </p>
+    </div>
+
+    <div class="evidence-cards">
+
+        <!-- صور من بيئة العمل -->
+        <div class="evidence-card">
+            <div class="card-icon">🖼️</div>
+
+            <h3>صور من بيئة العمل</h3>
+
+            <p>
+                لقطات شاشة توضح تنفيذ المهام والتصاميم والأعمال
+                العملية خلال فترة التدريب.
+            </p>
+
+            <a href="#work-photos" class="evidence-btn">
+                عرض الصور
+            </a>
+        </div>
+
+
+        <!-- ملفات المشاريع -->
+        <div class="evidence-card">
+            <div class="card-icon">📁</div>
+
+            <h3>ملفات المشاريع</h3>
+
+            <p>
+                ملفات وتصاميم المشاريع والتاسكات التي تم تنفيذها
+                باستخدام Figma خلال فترة التدريب.
+            </p>
+
+            <a href="#project-files" class="evidence-btn">
+                عرض الملفات
+            </a>
+        </div>
+
+
+        <!-- روابط المشاريع -->
+        <div class="evidence-card">
+            <div class="card-icon">🔗</div>
+
+            <h3>روابط المشاريع</h3>
+
+            <p>
+                روابط مشاريع Figma والأعمال التي تم تنفيذها
+                وتوثيقها خلال فترة التدريب.
+            </p>
+
+            <a href="#project-links" class="evidence-btn">
+                روابط المشاريع
+            </a>
+        </div>
 
     </div>
 
-
-    <div class="attachments-grid">
-<!-- صور من بيئة العمل -->
-<section id="work-photos">
-    <h2>📸 صور من بيئة العمل</h2>
-
-    <p>
-        مجموعة من الصور التي توثق الأعمال والتصاميم التي تم تنفيذها
-        خلال فترة التدريب الميداني.
-    </p>
-
-    <button class="show-photos-btn" onclick="openWorkPhotos()">
-        عرض الصور
-    </button>
 </section>
 
-<!-- نافذة الصور -->
-<div id="workPhotosModal" class="photos-modal">
-    <div class="photos-content">
-
-        <span class="close-photos" onclick="closeWorkPhotos()">&times;</span>
-
-        <h2>صور من بيئة العمل</h2>
-
-        <div class="photos-grid">
-
-            <div class="work-photo">
-                <img src="task1.png" alt="Task 1 - Travel Mate">
-                <h3>Task 1 – Travel Mate</h3>
-            </div>
-
-            <div class="work-photo">
-                <img src="task2.png" alt="Task 2 - learnHub">
-                <h3>Task 2 – learnHub</h3>
-            </div>
-
-            <div class="work-photo">
-                <img src="task3.png" alt="Task 3">
-                <h3>Task 3</h3>
-            </div>
-
-            <div class="work-photo">
-                <img src="task4.png" alt="Task 4 - تطبيق طلب وتوصيل الطعام">
-                <h3>Task 4 – تطبيق طلب وتوصيل الطعام</h3>
-            </div>
-
-        </div>
-    </div>
-</div>
 
 <style>
-#work-photos {
+.evidence-section {
+    padding: 70px 5%;
+    background: #f8f8ff;
     text-align: center;
-    padding: 40px 20px;
 }
 
-#work-photos h2 {
-    margin-bottom: 15px;
+.evidence-header {
+    margin-bottom: 45px;
 }
 
-.show-photos-btn {
-    background: #333;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
+.evidence-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    background: #eeeaff;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
 }
 
-.show-photos-btn:hover {
-    opacity: 0.85;
+.evidence-header h2 {
+    margin: 0;
+    color: #18356d;
+    font-size: 38px;
 }
 
-.photos-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    overflow-y: auto;
-    padding: 40px 15px;
+.evidence-header p {
+    margin-top: 12px;
+    color: #7180a8;
+    font-size: 17px;
 }
 
-.photos-content {
-    background: white;
-    max-width: 1000px;
+
+.evidence-cards {
+    max-width: 1200px;
     margin: auto;
-    padding: 30px;
-    border-radius: 15px;
-    position: relative;
-}
 
-.close-photos {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    font-size: 35px;
-    cursor: pointer;
-}
-
-.photos-content h2 {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.photos-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-.work-photo {
-    text-align: center;
+
+.evidence-card {
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #e2e5f5;
+    border-radius: 22px;
+
+    padding: 35px 25px;
+
+    box-shadow: 0 8px 25px rgba(50,60,120,0.08);
+
+    transition: 0.3s;
 }
 
-.work-photo img {
-    width: 100%;
-    max-height: 450px;
-    object-fit: contain;
+.evidence-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(50,60,120,0.13);
+}
+
+
+.card-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+
+    background: #f0edff;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+}
+
+
+.evidence-card h3 {
+    color: #182b68;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+.evidence-card p {
+    color: #687596;
+    line-height: 1.9;
+    font-size: 15px;
+    min-height: 85px;
+}
+
+
+.evidence-btn {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    background: #2379b9;
+    color: white;
+
+    padding: 13px 25px;
+
     border-radius: 10px;
-    border: 1px solid #ddd;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
 }
 
-.work-photo h3 {
-    margin-top: 10px;
+.evidence-btn:hover {
+    background: #185f95;
 }
 
-@media (max-width: 700px) {
-    .photos-grid {
+
+/* الموبايل */
+@media (max-width: 800px) {
+
+    .evidence-cards {
         grid-template-columns: 1fr;
     }
 
-    .photos-content {
-        padding: 20px 15px;
+    .evidence-header h2 {
+        font-size: 30px;
     }
+
 }
-</style>
+</style>     
 
-<script>
-function openWorkPhotos() {
-    document.getElementById("workPhotosModal").style.display = "block";
-}
 
-function closeWorkPhotos() {
-    document.getElementById("workPhotosModal").style.display = "none";
-}
+    
 
-window.onclick = function(event) {
-    const modal = document.getElementById("workPhotosModal");
 
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-} 
- </section>
+        
 
     
             
