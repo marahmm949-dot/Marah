@@ -2025,47 +2025,132 @@
 
 }
 
-<section id="courses">
-    <h2>🎓 الشهادات والدورات</h2>
+<!-- الشهادات والدورات -->
+<section id="certificates" class="certificates-section">
 
-    <p>الدورات التدريبية المرتبطة بمجال التدريب وتطوير المهارات.</p>
+    <div class="section-title">
+        <div class="title-icon">✦</div>
+        <h2>الشهادات والدورات</h2>
+        <p>الدورات والشهادات ذات العلاقة بالتدريب</p>
+    </div>
 
-    <div class="items">
+    <div class="certificates-container">
 
-        <div class="item">
-            <div class="icon">🎨</div>
-            <h3>تصميم واجهات المستخدم باستخدام Figma</h3>
-            <p>تطوير مهارات تصميم الواجهات وإنشاء النماذج الأولية باستخدام Figma.</p>
+        <!-- الشهادة الأولى -->
+        <div class="certificate-card">
+            <div class="certificate-icon">🏅</div>
+            <h3>Figma for UI Design</h3>
+            <p>Figma لتصميم واجهات المستخدم</p>
         </div>
 
-        <div class="item">
-            <div class="icon">💻</div>
-            <h3>إدارة المشاريع البرمجية باستخدام GitHub</h3>
-            <p>التعرف على أساسيات تنظيم وإدارة المشاريع البرمجية باستخدام GitHub.</p>
+        <!-- الشهادة الثانية -->
+        <div class="certificate-card">
+            <div class="certificate-icon">🏅</div>
+            <h3>Web & Mobile Interface Design</h3>
+            <p>تصميم واجهات الويب والموبايل</p>
         </div>
 
-        <div class="item">
-            <div class="icon">📱</div>
-            <h3>تصميم واجهات تطبيقات الويب والموبايل</h3>
-            <p>التدرب على تصميم واجهات تطبيقات الويب والموبايل بطريقة منظمة وسهلة الاستخدام.</p>
+        <!-- الشهادة الثالثة -->
+        <div class="certificate-card">
+            <div class="certificate-icon">🏅</div>
+            <h3>Git & GitHub Fundamentals</h3>
+            <p>أساسيات Git وGitHub</p>
         </div>
 
     </div>
+
 </section>
 
+<style>
+/* قسم الشهادات والدورات */
+.certificates-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+/* عنوان القسم */
+.section-title {
+    margin-bottom: 55px;
+}
+
+.title-icon {
+    font-size: 28px;
+    color: #243b63;
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    color: #222;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.section-title p {
+    font-size: 15px;
+    color: #999;
+    margin: 0;
+}
+
+/* البطاقات */
+.certificates-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* كل شهادة */
+.certificate-card {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+}
+
+/* أيقونة الشهادة */
+.certificate-icon {
+    font-size: 35px;
+    color: #d6a83f;
+    margin-bottom: 15px;
+}
+
+/* اسم الدورة */
+.certificate-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 12px;
+    font-weight: 600;
+}
+
+/* وصف الدورة */
+.certificate-card p {
+    font-size: 14px;
+    color: #aaa;
+    margin: 0;
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+    .certificates-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .certificate-card {
+        width: 100%;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+}
+</style>
+
         
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     
