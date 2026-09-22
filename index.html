@@ -2181,6 +2181,37 @@
             </a>
         </div>
 
+<!-- الأدلة والمرفقات -->
+<section id="evidence" class="evidence-section">
+
+    <div class="evidence-header">
+        <div class="evidence-icon">📎</div>
+
+        <h2>الأدلة والمرفقات</h2>
+
+        <p>
+            الأدلة التي تثبت تنفيذ المهام العملية خلال فترة التدريب
+        </p>
+    </div>
+
+    <div class="evidence-cards">
+
+        <!-- صور من بيئة العمل -->
+        <div class="evidence-card">
+            <div class="card-icon">🖼️</div>
+
+            <h3>صور من بيئة العمل</h3>
+
+            <p>
+                لقطات شاشة توضح تنفيذ المهام والتصاميم والأعمال
+                العملية خلال فترة التدريب.
+            </p>
+
+            <a href="#work-photos" class="evidence-btn">
+                عرض الصور
+            </a>
+        </div>
+
 
         <!-- ملفات المشاريع -->
         <div class="evidence-card">
@@ -2197,6 +2228,165 @@
                 عرض الملفات
             </a>
         </div>
+
+
+        <!-- روابط المشاريع -->
+        <div class="evidence-card">
+            <div class="card-icon">🔗</div>
+
+            <h3>روابط المشاريع</h3>
+
+            <p>
+                روابط مشاريع Figma والأعمال التي تم تنفيذها
+                وتوثيقها خلال فترة التدريب.
+            </p>
+
+            <a href="#project-links" class="evidence-btn">
+                روابط المشاريع
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+.evidence-section {
+    padding: 70px 5%;
+    background: #f8f8ff;
+    text-align: center;
+}
+
+.evidence-header {
+    margin-bottom: 45px;
+}
+
+.evidence-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    background: #eeeaff;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+}
+
+.evidence-header h2 {
+    margin: 0;
+    color: #18356d;
+    font-size: 38px;
+}
+
+.evidence-header p {
+    margin-top: 12px;
+    color: #7180a8;
+    font-size: 17px;
+}
+
+
+.evidence-cards {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.evidence-card {
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #e2e5f5;
+    border-radius: 22px;
+
+    padding: 35px 25px;
+
+    box-shadow: 0 8px 25px rgba(50,60,120,0.08);
+
+    transition: 0.3s;
+}
+
+.evidence-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(50,60,120,0.13);
+}
+
+
+.card-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+
+    background: #f0edff;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+}
+
+
+.evidence-card h3 {
+    color: #182b68;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+.evidence-card p {
+    color: #687596;
+    line-height: 1.9;
+    font-size: 15px;
+    min-height: 85px;
+}
+
+
+.evidence-btn {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    background: #2379b9;
+    color: white;
+
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.evidence-btn:hover {
+    background: #185f95;
+}
+
+
+/* الموبايل */
+@media (max-width: 800px) {
+
+    .evidence-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .evidence-header h2 {
+        font-size: 30px;
+    }
+
+}
+</style>
+        
 
 
         <!-- روابط المشاريع -->
