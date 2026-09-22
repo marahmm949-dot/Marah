@@ -910,6 +910,259 @@
 }
 </style >
 
+
+<!-- التقارير الدورية -->
+<section id="reports" class="reports-section">
+
+    <div class="reports-header">
+        <div class="reports-icon">📑</div>
+
+        <h2>التقارير الدورية</h2>
+
+        <p>توثيق ما تم إنجازه والتحديات والحلول والدروس المستفادة</p>
+    </div>
+
+    <div class="reports-grid">
+
+        <div class="report-card">
+            <div class="report-icon">✅</div>
+            <h3>المهام المنجزة</h3>
+            <p>
+                تنفيذ مجموعة من المهام العملية في مجال تصميم واجهات المستخدم
+                وتجربة المستخدم باستخدام Figma، وإنشاء الواجهات وتنظيم عناصرها،
+                بالإضافة إلى إنشاء النماذج الأولية وربط الواجهات باستخدام Prototype.
+            </p>
+        </div>
+
+        <div class="report-card">
+            <div class="report-icon">⚠️</div>
+            <h3>التحديات</h3>
+            <p>
+                واجهت بعض التحديات أثناء تنفيذ المهام، خاصة في تنظيم عناصر
+                التصميم واختيار الألوان والخطوط المناسبة وتحقيق التناسق بين
+                الواجهات وربط الشاشات بشكل صحيح.
+            </p>
+        </div>
+
+        <div class="report-card">
+            <div class="report-icon">💡</div>
+            <h3>الحلول</h3>
+            <p>
+                تم التغلب على التحديات من خلال التدريب المستمر، ومراجعة التصاميم،
+                وتجربة أكثر من طريقة للتنسيق، والاستفادة من أدوات Figma
+                وملاحظات المدرب لتحسين الواجهات.
+            </p>
+        </div>
+
+        <div class="report-card">
+            <div class="report-icon">📚</div>
+            <h3>الدروس المستفادة</h3>
+            <p>
+                اكتساب خبرة عملية في تصميم واجهات المستخدم وتجربة المستخدم،
+                وتحسين مهارات استخدام Figma، وتنظيم المشاريع، وإنشاء نماذج
+                أولية تفاعلية، وأهمية المراجعة والتوثيق أثناء تنفيذ المهام.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.reports-section {
+    direction: rtl;
+    background: #f1f6fb;
+    padding: 80px 7%;
+    text-align: center;
+}
+
+.reports-header {
+    margin-bottom: 50px;
+}
+
+.reports-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 22px;
+
+    background: #e5f0fa;
+    color: #214b75;
+
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 36px;
+}
+
+.reports-header h2 {
+    margin: 0 0 15px;
+
+    color: #173f68;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.reports-header p {
+    margin: 0;
+
+    color: #7b8da3;
+    font-size: 21px;
+}
+
+.reports-grid {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+}
+
+.report-card {
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    padding: 32px;
+
+    min-height: 220px;
+
+    text-align: right;
+
+    box-shadow: 0 7px 22px rgba(0,0,0,0.06);
+
+    border: 1px solid #e5ebf2;
+
+    transition: 0.3s;
+}
+
+.report-card:hover {
+    transform: translateY(-4px);
+}
+
+.report-icon {
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 18px;
+
+    background: #e8f3fc;
+
+    border-radius: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+.report-card h3 {
+    margin: 0 0 15px;
+
+    color: #173f68;
+
+    font-size: 25px;
+}
+
+.report-card p {
+    margin: 0;
+
+    color: #718096;
+
+    font-size: 18px;
+
+    line-height: 2;
+
+    text-align: right;
+}
+
+
+/* الجوال */
+
+@media (max-width: 700px) {
+
+    .reports-section {
+        padding: 55px 18px;
+    }
+
+    .reports-header {
+        margin-bottom: 35px;
+    }
+
+    .reports-icon {
+        width: 65px;
+        height: 65px;
+
+        font-size: 30px;
+    }
+
+    .reports-header h2 {
+        font-size: 32px;
+    }
+
+    .reports-header p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .reports-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .report-card {
+        min-height: auto;
+
+        padding: 25px;
+
+        border-radius: 22px;
+    }
+
+    .report-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 24px;
+    }
+
+    .report-card h3 {
+        font-size: 22px;
+    }
+
+    .report-card p {
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 <!-- المشروع العملي -->
 <section id="projects" class="projects-section">
 
