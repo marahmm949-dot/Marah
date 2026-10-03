@@ -2349,10 +2349,18 @@
                 <p>تقييم المشرف في نهاية التدريب.</p>
             </div>
 
-            
+        
 
+
+
+
+
+
+
+        
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2360,23 +2368,26 @@
     <title>الخاتمة والتوصيات</title>
 
     <style>
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: Arial, Tahoma, sans-serif;
-            background: #23466f;
-            color: white;
-            line-height: 1.9;
+            background: #ffffff;
+            color: #1f3f67;
         }
 
-        .page {
+        .container {
+            width: 100%;
             min-height: 100vh;
-            background: #23466f;
+            background: white;
         }
+
+        /* المحتوى الرئيسي */
 
         .content {
             max-width: 900px;
@@ -2385,59 +2396,90 @@
             text-align: center;
         }
 
-        .icon-box {
+        /* الأيقونة */
+
+        .icon {
             width: 100px;
             height: 100px;
+
             margin: 0 auto 45px;
+
+            background: #f0f3f7;
+
             border-radius: 30px;
-            background: rgba(255, 255, 255, 0.10);
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            font-size: 45px;
+            font-size: 42px;
         }
+
+        /* العنوان */
 
         h1 {
             font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 25px;
+            font-weight: bold;
+
+            color: #1d416c;
+
+            margin-bottom: 20px;
         }
+
+        /* العنوان الفرعي */
 
         .subtitle {
             font-size: 25px;
-            color: #d5d9df;
-            margin-bottom: 80px;
+
+            color: #7c8794;
+
+            margin-bottom: 75px;
         }
 
-        .text {
-            font-size: 25px;
-            color: #f1f3f5;
+        /* النص */
+
+        .paragraph {
+            font-size: 24px;
+
+            line-height: 2;
+
+            color: #26384d;
+
             margin-bottom: 65px;
         }
 
+        /* الفوتر */
+
         .footer {
-            background: #163452;
-            padding: 45px 30px;
+            width: 100%;
+
+            background: #183858;
+
+            color: white;
+
             text-align: center;
+
+            padding: 40px 25px;
         }
 
         .footer-title {
-            font-size: 25px;
-            font-weight: bold;
+            font-size: 23px;
+
             margin-bottom: 15px;
         }
 
-        .footer-title span {
-            font-weight: normal;
-            color: #d9dee5;
+        .footer-title strong {
+            font-weight: bold;
         }
 
         .footer-text {
-            font-size: 21px;
-            color: #d9dee5;
+            font-size: 19px;
+
+            color: #dce3eb;
         }
+
+
+        /* الموبايل */
 
         @media (max-width: 600px) {
 
@@ -2445,91 +2487,126 @@
                 padding: 55px 25px 60px;
             }
 
-            .icon-box {
+            .icon {
                 width: 85px;
                 height: 85px;
-                font-size: 38px;
+
+                font-size: 35px;
+
                 margin-bottom: 35px;
             }
 
             h1 {
-                font-size: 36px;
+                font-size: 35px;
             }
 
             .subtitle {
-                font-size: 21px;
-                margin-bottom: 60px;
+                font-size: 20px;
+
+                margin-bottom: 55px;
             }
 
-            .text {
-                font-size: 20px;
+            .paragraph {
+                font-size: 19px;
+
+                line-height: 2;
+
                 margin-bottom: 50px;
             }
 
             .footer-title {
-                font-size: 20px;
+                font-size: 18px;
             }
 
             .footer-text {
-                font-size: 17px;
+                font-size: 16px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-<div class="page">
+    <div class="container">
 
-    <main class="content">
+        <section class="content">
 
-        <div class="icon-box">
-            🏁
-        </div>
+            <!-- الأيقونة -->
+            <div class="icon">
+                🏁
+            </div>
 
-        <h1>الخاتمة والتوصيات</h1>
 
-        <p class="subtitle">
-            ملخص تجربة التدريب الميداني
-        </p>
+            <!-- العنوان -->
+            <h1>
+                الخاتمة والتوصيات
+            </h1>
 
-        <p class="text">
-            ساهم التدريب الميداني في تعزيز قدرتي على تطبيق
-            المفاهيم الأكاديمية في بيئة عمل حقيقية، كما
-            ساعدني على تطوير مهارات تقنية وشخصية مهمة
-            مثل العمل الجماعي وإدارة الوقت والتواصل وحل
-            المشكلات.
-        </p>
 
-        <p class="text">
-            أوصي بالاستمرار في التدريب العملي والتركيز على
-            تنفيذ مهام حقيقية مرتبطة بتخصص الطالب، مع
-            المحافظة على توثيق جميع الأعمال والإنجازات خلال
-            فترة التدريب.
-        </p>
+            <!-- العنوان الفرعي -->
+            <p class="subtitle">
+                ملخص تجربة التدريب الميداني
+            </p>
 
-    </main>
 
-    <footer class="footer">
+            <!-- الفقرة الأولى -->
+            <p class="paragraph">
 
-        <div class="footer-title">
-            التدريب الميداني
-            <span>— مثال توضيحي لملف إنجاز الطالب</span>
-        </div>
+                ساهم التدريب الميداني في تعزيز قدرتي على تطبيق
+                المفاهيم الأكاديمية في بيئة عمل حقيقية، كما
+                ساعدني على تطوير مهارات تقنية وشخصية مهمة
+                مثل العمل الجماعي وإدارة الوقت والتواصل وحل
+                المشكلات.
 
-        <p class="footer-text">
-            جميع البيانات الواردة في هذا المثال افتراضية.
-        </p>
+            </p>
 
-    </footer>
 
-</div>
+            <!-- الفقرة الثانية -->
+            <p class="paragraph">
+
+                أوصي بالاستمرار في التدريب العملي والتركيز على
+                تنفيذ مهام حقيقية مرتبطة بتخصص الطالب، مع
+                المحافظة على توثيق جميع الأعمال والإنجازات خلال
+                فترة التدريب.
+
+            </p>
+
+        </section>
+
+
+        <!-- الجزء السفلي -->
+
+        <footer class="footer">
+
+            <p class="footer-title">
+
+                <strong>التدريب الميداني</strong>
+                — مثال توضيحي لملف إنجاز الطالب
+
+            </p>
+
+            <p class="footer-text">
+
+                جميع البيانات الواردة في هذا المثال افتراضية.
+
+            </p>
+
+        </footer>
+
+    </div>
 
 </body>
+
 </html>
 
 
 
+
+
+
+        
 
     <!-- التذييل -->
     <footer>
