@@ -2348,7 +2348,8 @@
                 <h3>تقييم المشرف</h3>
                 <p>تقييم المشرف في نهاية التدريب.</p>
             
-<!DOCTYPE html>
+
+        <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -2379,7 +2380,7 @@
 
         .header {
             display: grid;
-            grid-template-columns: 1fr 1fr 2.2fr;
+            grid-template-columns: 2.2fr 1fr 1fr;
             background: #173d66;
             color: white;
             font-size: 30px;
@@ -2393,7 +2394,7 @@
 
         .row {
             display: grid;
-            grid-template-columns: 1fr 1fr 2.2fr;
+            grid-template-columns: 2.2fr 1fr 1fr;
             min-height: 85px;
             border-bottom: 1px solid #e0e7ed;
             align-items: center;
@@ -2403,11 +2404,11 @@
             border-bottom: none;
         }
 
-        .score {
-            text-align: center;
-            font-size: 32px;
-            color: #0b9658;
-            font-weight: bold;
+        .criterion {
+            text-align: right;
+            padding: 18px 25px;
+            font-size: 25px;
+            line-height: 1.5;
         }
 
         .max-score {
@@ -2416,11 +2417,11 @@
             color: #173d66;
         }
 
-        .criterion {
-            text-align: right;
-            padding: 18px 25px;
-            font-size: 25px;
-            line-height: 1.5;
+        .score {
+            text-align: center;
+            font-size: 32px;
+            color: #0b9658;
+            font-weight: bold;
         }
 
         .total {
@@ -2472,74 +2473,73 @@
 
     <!-- العناوين -->
     <div class="header">
-        <div>العلامة</div>
-        <div>العلامة القصوى</div>
         <div>عناصر التقييم</div>
+        <div>العلامة القصوى</div>
+        <div>العلامة</div>
     </div>
 
     <!-- 1 -->
     <div class="row">
-        <div class="score">4</div>
-        <div class="max-score">4</div>
         <div class="criterion">الالتزام بالدوام</div>
+        <div class="max-score">4</div>
+        <div class="score">4</div>
     </div>
 
     <!-- 2 -->
     <div class="row">
-        <div class="score">4</div>
-        <div class="max-score">4</div>
         <div class="criterion">استيعاب الطالب لطبيعة عمل المؤسسة</div>
+        <div class="max-score">4</div>
+        <div class="score">4</div>
     </div>
 
     <!-- 3 -->
     <div class="row">
-        <div class="score">4</div>
-        <div class="max-score">5</div>
         <div class="criterion">
-            المقدرة ع إنجاز المهام بالشكل والوقت المطلوب
+            المقدرة على إنجاز المهام بالشكل والوقت المطلوب
         </div>
+        <div class="max-score">5</div>
+        <div class="score">4</div>
     </div>
 
     <!-- 4 -->
     <div class="row">
-        <div class="score">4</div>
-        <div class="max-score">4</div>
         <div class="criterion">مراعاة مبادئ السلامة والأمان</div>
+        <div class="max-score">4</div>
+        <div class="score">4</div>
     </div>
 
     <!-- 5 -->
     <div class="row">
-        <div class="score">5</div>
+        <div class="criterion">المقدرة على العمل ضمن الفريق</div>
         <div class="max-score">5</div>
-        <div class="criterion">المقدرة ع العمل ضمن الفريق</div>
+        <div class="score">5</div>
     </div>
 
     <!-- 6 -->
     <div class="row">
-        <div class="score">4</div>
+        <div class="criterion">القدرة على الإبداع في العمل</div>
         <div class="max-score">4</div>
-        <div class="criterion">القدرة ع الابداع في العمل</div>
+        <div class="score">4</div>
     </div>
 
     <!-- 7 -->
     <div class="row">
-        <div class="score">4</div>
-        <div class="max-score">4</div>
         <div class="criterion">حسن السير والسلوك</div>
+        <div class="max-score">4</div>
+        <div class="score">4</div>
     </div>
 
     <!-- المجموع -->
     <div class="row total">
-        <div class="score">30/29</div>
-        <div class="max-score">30</div>
         <div class="criterion">المجموع</div>
+        <div class="max-score">30</div>
+        <div class="score">29/30</div>
     </div>
 
 </div>
 
 </body>
 </html>
-        
 
 
 
