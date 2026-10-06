@@ -2347,8 +2347,198 @@
                 <div class="icon">⭐</div>
                 <h3>تقييم المشرف</h3>
                 <p>تقييم المشرف في نهاية التدريب.</p>
-            </div>
+            
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عناصر التقييم</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: #f5f9fc;
+            font-family: Arial, Tahoma, sans-serif;
+            color: #12345a;
+        }
+
+        .evaluation-card {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            border: 1px solid #d7e1ea;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        .header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2.2fr;
+            background: #173d66;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .header div {
+            padding: 28px 15px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2.2fr;
+            min-height: 85px;
+            border-bottom: 1px solid #e0e7ed;
+            align-items: center;
+        }
+
+        .row:last-child {
+            border-bottom: none;
+        }
+
+        .score {
+            text-align: center;
+            font-size: 32px;
+            color: #0b9658;
+            font-weight: bold;
+        }
+
+        .max-score {
+            text-align: center;
+            font-size: 30px;
+            color: #173d66;
+        }
+
+        .criterion {
+            text-align: right;
+            padding: 18px 25px;
+            font-size: 25px;
+            line-height: 1.5;
+        }
+
+        .total {
+            background: #fafcfd;
+            font-weight: bold;
+        }
+
+        .total .criterion {
+            font-size: 28px;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 15px;
+            }
+
+            .header {
+                font-size: 19px;
+            }
+
+            .header div {
+                padding: 20px 8px;
+            }
+
+            .row {
+                min-height: 70px;
+            }
+
+            .criterion {
+                font-size: 17px;
+                padding: 12px;
+            }
+
+            .score,
+            .max-score {
+                font-size: 22px;
+            }
+
+            .total .criterion {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="evaluation-card">
+
+    <!-- العناوين -->
+    <div class="header">
+        <div>العلامة</div>
+        <div>العلامة القصوى</div>
+        <div>عناصر التقييم</div>
+    </div>
+
+    <!-- 1 -->
+    <div class="row">
+        <div class="score">4</div>
+        <div class="max-score">4</div>
+        <div class="criterion">الالتزام بالدوام</div>
+    </div>
+
+    <!-- 2 -->
+    <div class="row">
+        <div class="score">4</div>
+        <div class="max-score">4</div>
+        <div class="criterion">استيعاب الطالب لطبيعة عمل المؤسسة</div>
+    </div>
+
+    <!-- 3 -->
+    <div class="row">
+        <div class="score">4</div>
+        <div class="max-score">5</div>
+        <div class="criterion">
+            المقدرة ع إنجاز المهام بالشكل والوقت المطلوب
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="row">
+        <div class="score">4</div>
+        <div class="max-score">4</div>
+        <div class="criterion">مراعاة مبادئ السلامة والأمان</div>
+    </div>
+
+    <!-- 5 -->
+    <div class="row">
+        <div class="score">5</div>
+        <div class="max-score">5</div>
+        <div class="criterion">المقدرة ع العمل ضمن الفريق</div>
+    </div>
+
+    <!-- 6 -->
+    <div class="row">
+        <div class="score">4</div>
+        <div class="max-score">4</div>
+        <div class="criterion">القدرة ع الابداع في العمل</div>
+    </div>
+
+    <!-- 7 -->
+    <div class="row">
+        <div class="score">4</div>
+        <div class="max-score">4</div>
+        <div class="criterion">حسن السير والسلوك</div>
+    </div>
+
+    <!-- المجموع -->
+    <div class="row total">
+        <div class="score">30/29</div>
+        <div class="max-score">30</div>
+        <div class="criterion">المجموع</div>
+    </div>
+
+</div>
+
+</body>
+</html>
         
 
 
