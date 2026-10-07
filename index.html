@@ -243,18 +243,81 @@
             .items {
                 grid-template-columns: 1fr;
             }
+            
+    
+section {
+        padding: 55px 15px;
+    }
 
-            section {
-                padding: 55px 15px;
-            }
+    /* عرض ملف الإنجاز بشكل أفقي على الجوال */
+    @media screen and (max-width: 800px) and (orientation: portrait) {
+
+        #rotate-message {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: #111827;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
         }
-    </style>
-</head>
 
+        #rotate-message > div {
+            max-width: 350px;
+        }
+
+        .rotate-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        #rotate-message h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        #rotate-message p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #d1d5db;
+        }
+    }
+
+    @media screen and (max-width: 800px) and (orientation: landscape) {
+
+        #rotate-message {
+            display: none;
+        }
+    }
+
+</style>
+
+
+
+</head>
 <body>
 
-    <!-- شريط التنقل -->
-    <nav>
+<div id="rotate-message">
+    <div>
+        <div class="rotate-icon">📱↔️</div>
+
+        <h2>يرجى تدوير الهاتف</h2>
+
+        <p>
+            لعرض ملف الإنجاز بشكل أفضل،
+            قم بتدوير الهاتف إلى الوضع الأفقي.
+        </p>
+    </div>
+</div>
+
+<!-- شريط التنقل -->
+<nav>
+
+
+    
         <div class="nav-container">
 
             <a href="#home" class="logo">ملف إنجازي</a>
@@ -2761,13 +2824,7 @@
 
 
 <body>
-<div id="rotate-message">
-    <div>
-        <div class="rotate-icon">📱↔️</div>
-        <h2>يرجى تدوير الهاتف</h2>
-        <p>لأفضل عرض لملف الإنجاز، قم بتدوير الهاتف إلى الوضع الأفقي.</p>
-    </div>
-</div>
+
 
     
     <div class="container">
