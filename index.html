@@ -768,79 +768,141 @@
             طالبة علم الحاسوب – تكنولوجيا معلومات تطبيقية
             <br>
             ملف إنجاز التدريب الميداني 2026 / 2027
-        
     
-
-
-<!-- STUDENT DATA -->
-<section id="student-data">
+            
+<!-- بيانات الطالب -->
+<section id="student-data" class="student-data">
     <div class="container">
-
-        <div class="section-title">
-            <h2>بيانات الطالب</h2>
-            <p>المعلومات الأساسية للتدريب الميداني</p>
-        </div>
-
-        <div class="student-grid">
-
-            <div class="student-card">
-                <strong>الاسم</strong>
-                <span>مرح أحمد محمد أبو الطرابيش</span>
-            </div>
-
-            <div class="student-card">
-                <strong>الرقم الجامعي</strong>
-                <span>2320225065</span>
-            </div>
-
-            <div class="student-card">
-                <strong>المساق</strong>
-                <span>التدريب الميداني</span>
-            </div>
-
-            <div class="student-card">
-                <strong>التخصص</strong>
-                <span>علم الحاسوب – تكنولوجيا معلومات تطبيقية</span>
-            </div>
-
-            <div class="student-card">
-                <strong>جهة التدريب</strong>
-                <span>مركز فلسطين للصدمة – بريطانيا</span>
-            </div>
-
-            <div class="student-card">
-                <strong>مدرب المؤسسة</strong>
-                <span>أحمد غراب</span>
-            </div>
-
-            <div class="student-card">
-                <strong>المشرف الجامعي</strong>
-                <span>د. مصباح موسى</span>
-            </div>
+        <h2>بيانات الطالب</h2>
+        <p class="section-subtitle">معلومات الطالب وجهة التدريب والمشرف الأكاديمي</p>
 
         <div class="student-card">
-                <strong>عدد ساعات التدريب</strong>
-                <span>120 ساعة</span>
+
+            <div class="info-item">
+                <span class="info-title">الاسم</span>
+                <span class="info-value">مرح أحمد محمد أبو الطرابيش</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-title">الرقم الجامعي</span>
+                <span class="info-value">اكتبي الرقم الجامعي هنا</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-title">المساق</span>
+                <span class="info-value">التدريب الميداني</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-title">جهة التدريب</span>
+                <span class="info-value">مركز فلسطين للصدمة – بريطانيا</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-title">مدرب المؤسسة</span>
+                <span class="info-value">أحمد غراب</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-title">المشرف الجامعي</span>
+                <span class="info-value">د. مصباح موسى</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-title">عدد ساعات التدريب</span>
+                <span class="info-value">120 ساعة</span>
             </div>
 
         </div>
-
     </div>
 </section>
 
+<style>
+.student-data {
+    padding: 70px 20px;
+    background: #f8f9fa;
+    direction: rtl;
+}
 
-<!-- TRAINING -->
-<section id="training">
-    <div class="container">
+.student-data .container {
+    max-width: 1000px;
+    margin: auto;
+}
 
-        <div class="section-title">
-            <h2>التدريب الميداني</h2>
+.student-data h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 35px;
+}
+
+.student-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.info-item {
+    padding: 18px 20px;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.info-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.info-value {
+    display: block;
+    color: #555;
+    font-size: 16px;
+}
+
+/* الجوال */
+@media (max-width: 600px) {
+    .student-data {
+        padding: 45px 15px;
+    }
+
+    .student-data h2 {
+        font-size: 26px;
+    }
+
+    .student-card {
+        grid-template-columns: 1fr;
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .info-item {
+        padding: 15px;
+    }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
             
-
-
-<!-- TRAINING PLAN -->
-<section id="plan">
-    <div class="container">
 
         <div class="section-title">
             <h2>الخطة التدريبية</h2>
