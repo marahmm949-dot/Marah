@@ -1271,110 +1271,181 @@
 </style>
 
 
-<!-- خطة التدريب -->
-<section id="training-plan" class="training-plan">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="plan-header">
-        <div class="plan-icon">📅</div>
+    <title>خطة التدريب</title>
 
-        <h2>خطة التدريب</h2>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <p
-    </div>
+        body {
+            font-family: "Tahoma", Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.8;
+        }
 
-    <div class="plan-container">
+        .training-plan {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
 
-        <!-- المرحلة الأولى -->
+        /* العنوان */
+        .page-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .page-title h1 {
+            font-size: 32px;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            color: #777;
+            font-size: 15px;
+        }
+
+        /* البطاقات */
+        .plan-card {
+            background: #ffffff;
+            margin-bottom: 18px;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .plan-card h2 {
+            font-size: 21px;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .plan-card p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        /* الجوال */
+        @media (max-width: 600px) {
+
+            .training-plan {
+                margin: 25px auto;
+                padding: 15px;
+            }
+
+            .page-title h1 {
+                font-size: 27px;
+            }
+
+            .page-title p {
+                font-size: 13px;
+            }
+
+            .plan-card {
+                padding: 20px;
+                margin-bottom: 14px;
+                border-radius: 10px;
+            }
+
+            .plan-card h2 {
+                font-size: 18px;
+            }
+
+            .plan-card p {
+                font-size: 13px;
+                line-height: 1.9;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="training-plan">
+
+        <!-- عنوان الصفحة -->
+        <div class="page-title">
+            <h1>خطة التدريب</h1>
+            <p>المهام والأهداف التي تم تنفيذها خلال فترة التدريب</p>
+        </div>
+
+        <!-- 1 -->
         <div class="plan-card">
-            <h3>التعرف على بيئة التدريب</h3>
+            <h2>التعرف على بيئة التدريب</h2>
             <p>
-                التعرف على جهة التدريب وطبيعة العمل،
-                وفهم آلية تنفيذ المهام وتنظيم المشاريع.
+                التعرف على جهة التدريب وطبيعة العمل فيها، والتعرف على الأقسام
+                والمهام والبرامج المستخدمة أثناء فترة التدريب.
             </p>
         </div>
 
-        <!-- المرحلة الثانية -->
+        <!-- 2 -->
         <div class="plan-card">
-            <h3>أساسيات تصميم UI/UX</h3>
+            <h2>أساسيات تصميم UI/UX</h2>
             <p>
-                التعرف على مبادئ تصميم واجهات المستخدم
-                وتجربة المستخدم واستخدام برنامج Figma.
+                التعرف على مبادئ تصميم واجهات المستخدم وتجربة المستخدم،
+                والتعرف على برنامج Figma واستخدامه في تصميم الواجهات.
             </p>
         </div>
 
-        <!-- المرحلة الثالثة -->
+        <!-- 3 -->
         <div class="plan-card">
-            <h3>تصميم الواجهات</h3>
+            <h2>تصميم الواجهات</h2>
             <p>
-                تطبيق الألوان والخطوط والعناصر البصرية
-                وإنشاء واجهات منظمة ومتناسقة للتطبيقات.
-            مسة -->
-        <div class="plan-card">
-            <h3>تنظيم المشاريع باستخدام GitHub</h3>
-            <p>
-                تنظيم ملفات المشاريع ورفع الأعمال على GitHub
-                ومتابعة الإصدارات والتعديلات.
+                تطبيق الألوان والخطوط والعناصر البصرية في تصميم واجهات
+                منظمة وبسيطة ومناسبة لمختلف التطبيقات.
             </p>
         </div>
-        <!;
 
-    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+        <!-- 4 -->
+        <div class="plan-card">
+            <h2>تصميم واجهات وتطبيقات تفاعلية</h2>
+            <p>
+                تصميم شاشات متكاملة وربط الواجهات معًا باستخدام Prototype
+                لإنشاء نموذج أولي تفاعلي.
+            </p>
+        </div>
 
-    border: 1px solid #e5ebf2;
-}
+        <!-- 5 -->
+        <div class="plan-card">
+            <h2>تنظيم المشاريع باستخدام GitHub</h2>
+            <p>
+                التعرف على GitHub وتنظيم ملفات المشاريع ورفع الأعمال
+                ومتابعة التعديلات والإصدارات.
+            </p>
+        </div>
 
-.plan-card h3 {
-    color: #173f68;
-    font-size: 27px;
-    margin: 0 0 12px;
-}
+        <!-- 6 -->
+        <div class="plan-card">
+            <h2>المراجعة والتوثيق</h2>
+            <p>
+                مراجعة الأعمال المنفذة وتوثيق المهام والنتائج والاستفادة
+                من الملاحظات لتحسين مستوى العمل.
+            </p>
+        </div>
 
-.plan-card p {
-    color: #7a899c;
-    font-size: 19px;
-    line-height: 1.9;
-    margin: 0;
-}
+    </section>
 
+</body>
+</html>
 
-/* الجوال */
-@media (max-width: 700px) {
-
-    .training-plan {
-        padding: 55px 20px;
-    }
-
-    .plan-header h2 {
-        font-size: 34px;
-    }
-
-    .plan-header p {
-        font-size: 18px;
-        line-height: 1.7;
-    }
-
-    .plan-container {
-        gap: 22px;
-    }
-
-    .plan-card {
-        padding: 28px 25px;
-        border-radius: 23px;
-    }
-
-    .plan-card h3 {
-        font-size: 23px;
-        line-height: 1.5;
-    }
-
-    .plan-card p {
-        font-size: 17px;
-        line-height: 1.9;
-    }
-
-}
-
-</style>
+        
 
 
 
