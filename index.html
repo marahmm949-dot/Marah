@@ -768,92 +768,231 @@
             طالبة علم الحاسوب – تكنولوجيا معلومات تطبيقية
             <br>
             ملف إنجاز التدريب الميداني 2026 / 2027
-        </p>
-
-        <a href="#about" class="hero-button">استكشاف الملف</a>
-
-    </div>
-</header>
-
-
-<!-- ABOUT -->
-<section id="about">
-    <div class="container">
-
-        <div class="section-title">
-            <h2>نبذة عن الملف</h2>
-            <p>ملف إنجاز التدريب الميداني</p>
-        </div>
-
-        <div class="about-box">
-
-            <p>
-                يهدف هذا الملف إلى توثيق تجربة التدريب الميداني
-                وما تم إنجازه من مهام ومشاريع خلال فترة التدريب.
-            </p>
-
-            <p>
-                ركز التدريب على تصميم واجهات وتجربة المستخدم
-                باستخدام Figma، بالإضافة إلى تنظيم المشاريع
-                وإدارة الإصدارات باستخدام GitHub.
-            </p>
-
-            <p>
-                يعرض الملف المهارات المكتسبة والمشاريع والتقارير
-                والتقييم النهائي والخلاصة الخاصة بالتجربة التدريبية.
-            </p>
-
-        </div>
-
-    </div>
-</section>
-
+        
 <!-- بيانات الطالب -->
-<section id="student-data" class="student-data">
-    <div class="container">
+<section id="student-data" class="student-data-section">
+
+    <div class="section-header">
+        <div class="section-icon">🎓</div>
         <h2>بيانات الطالب</h2>
-        <p class="section-subtitle">معلومات الطالب وجهة التدريب والمشرف الأكاديمي</p>
-
-        <div class="student-card">
-
-            <div class="info-item">
-                <span class="info-title">الاسم</span>
-                <span class="info-value">مرح أحمد محمد أبو الطرابيش</span>
-            </div>
-
-            <div class="info-item">
-                <span class="info-title">الرقم الجامعي</span>
-                <span class="info-value">اكتبي الرقم الجامعي هنا</span>
-            </div>
-
-            <div class="info-item">
-                <span class="info-title">المساق</span>
-                <span class="info-value">التدريب الميداني</span>
-            </div>
-
-            <div class="info-item">
-                <span class="info-title">جهة التدريب</span>
-                <span class="info-value">مركز فلسطين للصدمة – بريطانيا</span>
-            </div>
-
-            <div class="info-item">
-                <span class="info-title">مدرب المؤسسة</span>
-                <span class="info-value">أحمد غراب</span>
-            </div>
-
-            <div class="info-item">
-                <span class="info-title">المشرف الجامعي</span>
-                <span class="info-value">د. مصباح موسى</span>
-            </div>
-
-            <div class="info-item">
-                <span class="info-title">عدد ساعات التدريب</span>
-                <span class="info-value">120 ساعة</span>
-            </div>
-
-        </div>
+        <p>معلومات الطالب وجهة التدريب والمشرف الأكاديمي</p>
     </div>
+
+    <!-- بطاقة الطالب -->
+    <div class="student-profile-card">
+
+        <div class="profile-icon">👤</div>
+
+        <h3>مرح أحمد محمد أبو الطرابيش</h3>
+
+        <p>طالبة علم حاسوب</p>
+
+    </div>
+
+    <!-- معلومات الطالب -->
+    <div class="student-info-card">
+
+        <div class="info-row">
+            <span class="info-title">الاسم</span>
+            <span class="info-value">مرح أحمد محمد أبو الطرابيش</span>
+        </div>
+
+        <div class="info-row">
+            <span class="info-title">الرقم الجامعي</span>
+            <span class="info-value">2320225065</span>
+        </div>
+
+        <div class="info-row">
+            <span class="info-title">المساق</span>
+            <span class="info-value">التدريب الميداني</span>
+        </div>
+
+        <div class="info-row">
+            <span class="info-title">جهة التدريب</span>
+            <span class="info-value">مركز فلسطين للصدمة – بريطانيا</span>
+        </div>
+
+        <div class="info-row">
+            <span class="info-title">مدرب المؤسسة</span>
+            <span class="info-value">أحمد غراب</span>
+        </div>
+
+        <div class="info-row">
+            <span class="info-title">المشرف الجامعي</span>
+            <span class="info-value">د. مصباح موسى</span>
+        </div>
+
+        <div class="info-row">
+            <span class="info-title">عدد ساعات التدريب</span>
+            <span class="info-value">120 ساعة</span>
+        </div>
+
+    </div>
+
 </section>
+
+
+<style>
+
+/* القسم */
+.student-data-section {
+    direction: rtl;
+    padding: 70px 20px;
+    background: #f1f6fb;
+    text-align: center;
+}
+
+/* رأس القسم */
+.section-header {
+    margin-bottom: 45px;
+}
+
+.section-icon {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 20px;
+    background: #e5f0fa;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: #173f68;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.section-header p {
+    color: #718096;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+/* بطاقة الطالب */
+.student-profile-card {
+    max-width: 880px;
+    margin: 0 auto 30px;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 45px 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.profile-icon {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px;
+    background: #24547f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+}
+
+.student-profile-card h3 {
+    color: #173f68;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.student-profile-card p {
+    color: #718096;
+    font-size: 22px;
+    margin: 0;
+}
+
+/* بطاقة المعلومات */
+.student-info-card {
+    max-width: 880px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 15px 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: right;
+}
+
+/* كل سطر */
+.info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px 5px;
+    border-bottom: 1px solid #e5eaf0;
+    font-size: 19px;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-title {
+    color: #173f68;
+    font-weight: 700;
+    min-width: 180px;
+}
+
+.info-value {
+    color: #374151;
+    text-align: left;
+    flex: 1;
+}
+
+/* الجوال */
+@media (max-width: 600px) {
+
+    .section-header h2 {
+        font-size: 34px;
+    }
+
+    .section-header p {
+        font-size: 18px;
+    }
+
+    .student-profile-card,
+    .student-info-card {
+        border-radius: 22px;
+    }
+
+    .student-info-card {
+        padding: 10px 20px;
+    }
+
+    .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+    }
+
+    .info-title {
+        min-width: auto;
+    }
+
+    .info-value {
+        text-align: right;
+    }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+            
 
 <style>
 .student-data {
