@@ -2719,39 +2719,71 @@
             </div>
 
 
-            <!-- الخاتمة والتوصيات -->
-<section id="conclusion" class="section">
-    <div class="section-title">
-        <h2>الخاتمة والتوصيات</h2>
-        <p>ملخص تجربة التدريب الميداني</p>
-    </div>
 
-    <div class="cards">
+/* لوحة الخاتمة والتوصيات */
+.conclusion-section {
+    padding: 50px 20px;
+}
 
-        <!-- الخاتمة -->
-        <div class="card">
-            <h3>الخاتمة</h3>
-            <p>
-                ساهم التدريب الميداني في تعزيز قدراتي على تطبيق المفاهيم
-                الأكاديمية في بيئة عمل حقيقية، كما ساعدني على تطوير مهارات
-                تقنية وشخصية مهمة مثل العمل الجماعي وإدارة الوقت والتواصل
-                وحل المشكلات.
-            </p>
-        </div>
+.conclusion-box {
+    background: linear-gradient(135deg, #1f4e8c, #2f6fb3);
+    color: white;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
 
-        <!-- التوصيات -->
-        <div class="card">
-            <h3>التوصيات</h3>
-            <p>
-                أوصي بالاستمرار في التدريب العملي والتركيز على تنفيذ مهام
-                حقيقية مرتبطة بتخصص الطالب، مع المحافظة على توثيق جميع
-                الأعمال والإنجازات خلال فترة التدريب.
-            </p>
-        </div>
+.conclusion-box h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
 
-    </div>
-</section>
+.conclusion-box .subtitle {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
 
+.conclusion-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.conclusion-item {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.conclusion-item h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.conclusion-item p {
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+/* للجوال */
+@media (max-width: 700px) {
+    .conclusion-box {
+        padding: 25px 18px;
+    }
+
+    .conclusion-content {
+        grid-template-columns: 1fr;
+    }
+
+    .conclusion-box h2 {
+        font-size: 25px;
+    }
+}
 
             
     
