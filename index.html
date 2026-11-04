@@ -1,15 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ملف إنجاز مرح أحمد أبو الطرابيش</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #173f68;
+    --secondary: #214b75;
+    --accent: #4c83b7;
+    --light: #f1f6fb;
+    --white: #ffffff;
+    --text: #34445a;
+    --muted: #718096;
+    --border: #e3ebf3;
+}
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -17,192 +32,324 @@ html {
 }
 
 body {
-    font-family: Tahoma, Arial, sans-serif;
-    background: #f4f7fb;
-    color: #263449;
+    font-family: 'Cairo', sans-serif;
+    background: #f7f9fc;
+    color: var(--text);
     line-height: 1.9;
 }
 
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
 header {
-    background: linear-gradient(135deg, #142b4a, #2873b9);
+    background: linear-gradient(135deg, #173f68, #326c9e);
     color: white;
     text-align: center;
     padding: 65px 20px;
 }
 
+.header-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.header-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
 header h1 {
     font-size: 34px;
-    margin: 12px 0;
+    font-weight: 800;
+    margin: 10px 0;
 }
 
 header p {
-    color: #e5effa;
-    font-size: 17px;
+    font-size: 16px;
+    color: #e5eef8;
 }
 
-header .year {
-    margin-top: 15px;
-    font-weight: bold;
+.header-line {
+    width: 75px;
+    height: 3px;
+    background: #b8d6f1;
+    margin: 20px auto;
+    border-radius: 10px;
 }
+
+/* Navigation */
 
 nav {
     background: white;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 3px 12px #00000012;
+    box-shadow: 0 3px 15px rgba(0,0,0,.06);
     overflow-x: auto;
 }
 
-nav div {
+.nav-container {
     max-width: 1150px;
     margin: auto;
     display: flex;
     justify-content: center;
-    gap: 8px;
+    align-items: center;
+    gap: 5px;
     padding: 12px;
     white-space: nowrap;
 }
 
 nav a {
-    text-decoration: none;
-    color: #142b4a;
+    color: var(--primary);
     font-size: 13px;
-    padding: 7px 11px;
-    border-radius: 20px;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: .3s;
 }
 
 nav a:hover {
-    background: #eaf2fb;
+    background: var(--light);
+    color: var(--accent);
 }
 
-main {
-    max-width: 1050px;
-    margin: 30px auto;
-    padding: 0 15px;
-}
+/* Sections */
 
 section {
-    background: white;
-    padding: 25px;
-    margin-bottom: 23px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px #142b4a0c;
-    scroll-margin-top: 75px;
+    padding: 55px 20px;
+    scroll-margin-top: 65px;
 }
 
-h2 {
-    color: #173b63;
-    font-size: 23px;
-    border-bottom: 2px solid #e5eef8;
-    padding-bottom: 10px;
-    margin-bottom: 18px;
+.section-container {
+    max-width: 1100px;
+    margin: auto;
 }
 
-h3 {
-    color: #2463a6;
-    margin-bottom: 10px;
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
 }
 
-p {
-    margin-bottom: 10px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 13px;
-}
-
-.info, .card, .project {
-    background: #f8fafd;
-    border: 1px solid #e2eaf3;
-    border-radius: 12px;
-    padding: 15px;
-}
-
-.label {
-    display: block;
-    color: #718096;
-    font-size: 13px;
-}
-
-.value {
-    display: block;
-    color: #173b63;
-    font-weight: bold;
-}
-
-ul {
-    padding-right: 23px;
-}
-
-li {
+.section-heading .icon {
+    font-size: 35px;
     margin-bottom: 8px;
 }
 
-.project-grid {
+.section-heading h2 {
+    color: var(--primary);
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.section-heading::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    background: var(--accent);
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 22px;
+    box-shadow: 0 5px 18px rgba(23,63,104,.05);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(23,63,104,.11);
+}
+
+.card h3 {
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* About */
+
+.about-box {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 18px rgba(23,63,104,.05);
+    text-align: center;
+}
+
+/* Student data */
+
+.info-item {
+    background: #fff;
+    padding: 17px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.info-item span {
+    display: block;
+}
+
+.info-label {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.info-value {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* Training plan */
+
+.plan-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
-.project {
+.plan-item {
     background: white;
+    border-right: 4px solid var(--accent);
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.04);
 }
 
-.project h3 {
-    font-size: 18px;
+/* Projects */
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 18px rgba(23,63,104,.06);
+    transition: .3s;
 }
 
-.number {
-    display: inline-block;
-    background: #2463a6;
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-top {
+    background: var(--primary);
     color: white;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    padding: 20px;
     text-align: center;
-    line-height: 30px;
-    margin-left: 7px;
+}
+
+.project-top .project-icon {
+    font-size: 35px;
+}
+
+.project-top h3 {
+    color: white;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.project-body {
+    padding: 20px;
+}
+
+.project-body p {
+    color: var(--muted);
+    font-size: 14px;
 }
 
 .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
-    margin-top: 12px;
+    margin-top: 15px;
 }
 
 .tag {
-    background: #eaf2fb;
-    color: #173b63;
+    background: #eaf2fa;
+    color: var(--primary);
     padding: 4px 11px;
     border-radius: 20px;
     font-size: 12px;
 }
 
-.button {
+.project-link {
     display: inline-block;
-    background: #2463a6;
+    margin-top: 17px;
+    background: var(--primary);
     color: white;
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 8px;
-    margin-top: 12px;
+    padding: 8px 17px;
+    border-radius: 7px;
     font-size: 13px;
 }
 
-.button:hover {
-    background: #142b4a;
+.project-link:hover {
+    background: var(--accent);
 }
 
-.note {
-    background: #edf5ff;
-    border-right: 4px solid #2463a6;
-    padding: 14px;
-    margin-top: 15px;
-    border-radius: 8px;
+/* Reports */
+
+.report-card {
+    text-align: center;
+}
+
+.report-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Skills */
+
+.skill {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+}
+
+.skill-icon {
+    font-size: 28px;
+}
+
+.skill h3 {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Evaluation */
+
+.table-wrapper {
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
 }
 
 table {
@@ -212,34 +359,52 @@ table {
 }
 
 th, td {
-    border: 1px solid #dce5ef;
-    padding: 10px;
+    border: 1px solid var(--border);
+    padding: 12px;
     text-align: center;
+    font-size: 14px;
 }
 
 th {
-    background: #eaf2fb;
-    color: #173b63;
+    background: var(--primary);
+    color: white;
 }
 
-.total {
+.total-row {
+    background: var(--light);
     font-weight: bold;
-    background: #f1f6fc;
+    color: var(--primary);
 }
 
-.table-wrap {
-    overflow-x: auto;
+/* Conclusion */
+
+.conclusion-box {
+    background: linear-gradient(135deg, #173f68, #326c9e);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
 }
+
+.conclusion-box h3 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+/* Footer */
 
 footer {
-    text-align: center;
-    background: #142b4a;
+    background: #173f68;
     color: white;
+    text-align: center;
     padding: 25px 15px;
-    margin-top: 30px;
+    font-size: 13px;
 }
 
-@media(max-width: 650px) {
+/* Mobile */
+
+@media(max-width: 700px) {
+
     header {
         padding: 45px 15px;
     }
@@ -248,25 +413,30 @@ footer {
         font-size: 25px;
     }
 
-    nav div {
+    .nav-container {
         justify-content: flex-start;
     }
 
-    main {
-        padding: 0 10px;
+    nav a {
+        font-size: 12px;
+        padding: 7px 10px;
     }
 
     section {
-        padding: 18px 14px;
+        padding: 38px 14px;
     }
 
-    h2 {
-        font-size: 20px;
+    .section-heading h2 {
+        font-size: 22px;
     }
 
-    .grid,
-    .project-grid {
+    .cards,
+    .plan-list {
         grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 18px;
     }
 }
 </style>
@@ -274,402 +444,559 @@ footer {
 
 <body>
 
-<header id="top">
-    <p>ملف الإنجاز الأكاديمي والتدريب الميداني</p>
+<!-- HEADER -->
 
-    <h1>مرح أحمد محمد أبو الطرابيش</h1>
+<header>
+    <div class="header-content">
+        <div class="header-icon">🎓</div>
 
-    <p>طالبة علم الحاسوب – تكنولوجيا معلومات تطبيقية</p>
+        <h1>مرح أحمد محمد أبو الطرابيش</h1>
 
-    <p>جامعة الأقصى</p>
+        <p>ملف الإنجاز الأكاديمي والتدريب الميداني</p>
 
-    <div class="year">العام الأكاديمي 2026</div>
+        <p>طالبة علم الحاسوب – تكنولوجيا معلومات تطبيقية</p>
+
+        <p>جامعة الأقصى</p>
+
+        <div class="header-line"></div>
+
+        <p>العام التدريبي 2026–2027</p>
+    </div>
 </header>
 
+<!-- NAVIGATION -->
+
 <nav>
-<div>
+<div class="nav-container">
     <a href="#about">نبذة عني</a>
-    <a href="#data">بيانات التدريب</a>
-    <a href="#organization">جهة التدريب</a>
-    <a href="#plan">الخطة التدريبية</a>
-    <a href="#tools">التقنيات</a>
+    <a href="#data">بيانات الطالب</a>
+    <a href="#training">التدريب</a>
+    <a href="#plan">الخطة</a>
+    <a href="#reports">التقارير</a>
     <a href="#projects">المشاريع</a>
-    <a href="#case">دراسة الحالة</a>
     <a href="#skills">المهارات</a>
     <a href="#evaluation">التقييم</a>
-    <a href="#conclusion">الخاتمة</a>
+    <a href="#contact">التواصل</a>
 </div>
 </nav>
 
-<main>
+<!-- ABOUT -->
 
-<!-- نبذة عن الملف -->
 <section id="about">
-<h2>نبذة عن ملف الإنجاز</h2>
+<div class="section-container">
 
-<p>
-يستعرض هذا الملف تجربة التدريب الميداني التي هدفت إلى تطوير المهارات العملية
-في مجال تصميم واجهات المستخدم وتجربة المستخدم (UI/UX)، وتطبيق المفاهيم
-التصميمية من خلال تنفيذ مجموعة من المشاريع العملية.
-</p>
-
-<p>
-تضمنت التجربة استخدام برنامج Balsamiq لإعداد الرسومات الأولية للشاشات،
-واستخدام Figma لتصميم الواجهات وتحويل الأفكار إلى نماذج تفاعلية
-(Prototype)، بالإضافة إلى اختبار التصميم وتحسين تجربة المستخدم.
-</p>
-</section>
-
-<!-- بيانات الطالبة -->
-<section id="data">
-<h2>بيانات الطالبة والتدريب</h2>
-
-<div class="grid">
-
-<div class="info">
-<span class="label">اسم الطالبة</span>
-<span class="value">مرح أحمد محمد أبو الطرابيش</span>
+<div class="section-heading">
+    <div class="icon">👩🏻‍🎓</div>
+    <h2>نبذة عني</h2>
+    <p>التعريف بالطالبة ومسيرتها التدريبية</p>
 </div>
 
-<div class="info">
-<span class="label">الرقم الجامعي</span>
-<span class="value">2320225065</span>
-</div>
+<div class="about-box">
+    <p>
+    أنا مرح أحمد محمد أبو الطرابيش، طالبة علم الحاسوب
+    في جامعة الأقصى، تخصص تكنولوجيا معلومات تطبيقية.
+    أطمح إلى تطوير مهاراتي التقنية والعملية من خلال
+    التدريب والتطبيق العملي.
+    </p>
 
-<div class="info">
-<span class="label">الجامعة</span>
-<span class="value">جامعة الأقصى</span>
-</div>
-
-<div class="info">
-<span class="label">المساق</span>
-<span class="value">التدريب الميداني</span>
-</div>
-
-<div class="info">
-<span class="label">جهة التدريب</span>
-<span class="value">مركز فلسطين للصدمة – بريطانيا</span>
-</div>
-
-<div class="info">
-<span class="label">مدرب المؤسسة</span>
-<span class="value">أحمد غراب</span>
-</div>
-
-<div class="info">
-<span class="label">المشرف الأكاديمي</span>
-<span class="value">د. مصباح موسى</span>
-</div>
-
-<div class="info">
-<span class="label">إجمالي ساعات التدريب</span>
-<span class="value">120 ساعة تدريبية</span>
-</div>
-
-<div class="info">
-<span class="label">تاريخ بداية التدريب</span>
-<span class="value">02/09/2026</span>
-</div>
-
-<div class="info">
-<span class="label">العام التدريبي</span>
-<span class="value">2026–2027</span>
+    <p>
+    ركزت تجربة التدريب الميداني على تصميم واجهات المستخدم
+    وتجربة المستخدم UI/UX، واستخدام Balsamiq وFigma
+    لتنفيذ مجموعة من المشاريع التصميمية.
+    </p>
 </div>
 
 </div>
 </section>
 
-<!-- جهة التدريب -->
-<section id="organization">
-<h2>نبذة عن جهة التدريب</h2>
+<!-- STUDENT DATA -->
 
-<p>
-تم تنفيذ التدريب الميداني لدى مركز فلسطين للصدمة – بريطانيا،
-ضمن تجربة تدريبية هدفت إلى تنمية المهارات العملية والتعرف إلى
-مجال تصميم واجهات المستخدم وتجربة المستخدم، وتنفيذ مجموعة
-من المشاريع التصميمية باستخدام البرامج المتخصصة.
-</p>
-</section>
+<section id="data" style="background:#f1f6fb">
+<div class="section-container">
 
-<!-- الخطة -->
-<section id="plan">
-<h2>الخطة التدريبية</h2>
-
-<ul>
-<li>التعرف إلى بيئة التدريب وطبيعة العمل والمهام المطلوبة.</li>
-
-<li>التعرف إلى مفهوم واجهة المستخدم (UI) وتجربة المستخدم (UX) والفرق بينهما.</li>
-
-<li>التعرف إلى برنامج Balsamiq واستخدامه في إعداد الرسومات الأولية (Sketches).</li>
-
-<li>استخدام برنامج Figma لتحويل الرسومات الأولية إلى Wireframes.</li>
-
-<li>تصميم الواجهات باستخدام الألوان والخطوط والعناصر البصرية المناسبة.</li>
-
-<li>إنشاء النماذج التفاعلية (Prototype) وربط الشاشات ببعضها.</li>
-
-<li>اختبار تجربة المستخدم ومراجعة التصميم وإجراء التحسينات.</li>
-
-<li>تنفيذ المشاريع التطبيقية وإعداد دراسة حالة (Case Study).</li>
-</ul>
-</section>
-
-<!-- التقنيات -->
-<section id="tools">
-<h2>التقنيات والبرامج المستخدمة</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Balsamiq</h3>
-<p>
-استخدام البرنامج لإعداد الرسومات والتخطيطات الأولية (Sketches)
-للشاشات، وتحديد أماكن العناصر قبل البدء بالتصميم التفصيلي.
-</p>
+<div class="section-heading">
+    <div class="icon">📋</div>
+    <h2>بيانات الطالب</h2>
+    <p>معلومات الطالبة وجهة التدريب والمشرف الأكاديمي</p>
 </div>
 
-<div class="card">
-<h3>Figma</h3>
-<p>
-استخدام البرنامج لتحويل الرسومات الأولية إلى Wireframes،
-وتصميم الواجهات وإنشاء النماذج التفاعلية Prototype.
-</p>
+<div class="cards">
+
+<div class="info-item">
+<span class="info-label">اسم الطالبة</span>
+<span class="info-value">مرح أحمد محمد أبو الطرابيش</span>
 </div>
 
-<div class="card">
-<h3>UI – User Interface</h3>
-<p>
-الاهتمام بالمظهر البصري للواجهات، وتنظيم العناصر واختيار الألوان
-والخطوط المناسبة.
-</p>
+<div class="info-item">
+<span class="info-label">الرقم الجامعي</span>
+<span class="info-value">2320225065</span>
 </div>
 
-<div class="card">
-<h3>UX – User Experience</h3>
-<p>
-التركيز على احتياجات المستخدم وسهولة الاستخدام والتنقل بين
-الشاشات وتحسين تجربة المستخدم.
-</p>
+<div class="info-item">
+<span class="info-label">الجامعة</span>
+<span class="info-value">جامعة الأقصى</span>
+</div>
+
+<div class="info-item">
+<span class="info-label">المساق</span>
+<span class="info-value">التدريب الميداني</span>
+</div>
+
+<div class="info-item">
+<span class="info-label">جهة التدريب</span>
+<span class="info-value">مركز فلسطين للصدمة – بريطانيا</span>
+</div>
+
+<div class="info-item">
+<span class="info-label">مدرب المؤسسة</span>
+<span class="info-value">أحمد غراب</span>
+</div>
+
+<div class="info-item">
+<span class="info-label">المشرف الأكاديمي</span>
+<span class="info-value">د. مصباح موسى</span>
+</div>
+
+<div class="info-item">
+<span class="info-label">عدد ساعات التدريب</span>
+<span class="info-value">120 ساعة</span>
+</div>
+
+<div class="info-item">
+<span class="info-label">تاريخ بداية التدريب</span>
+<span class="info-value">02/09/2026</span>
+</div>
+
+<div class="info-item">
+<span class="info-label">العام التدريبي</span>
+<span class="info-value">2026–2027</span>
 </div>
 
 </div>
-
-<div class="note">
-<strong>آلية العمل:</strong>
-إعداد Sketches باستخدام Balsamiq، ثم تحويلها إلى Wireframes
-وتصميم الواجهات التفاعلية باستخدام Figma.
 </div>
 </section>
 
-<!-- المشاريع -->
-<section id="projects">
-<h2>المشاريع التدريبية</h2>
+<!-- TRAINING -->
 
-<p>
-تم تنفيذ أربعة مشاريع تطبيقية للتدرب على تصميم واجهات المستخدم
-وتحسين تجربة الاستخدام، بدءًا من التخطيط الأولي وحتى إعداد النماذج التفاعلية.
-</p>
+<section id="training">
+<div class="section-container">
 
-<div class="project-grid">
-
-<div class="project">
-<h3><span class="number">1</span>تطبيق حجز تذاكر الطيران</h3>
-
-<p>
-تصميم واجهات تطبيق لحجز تذاكر الطيران، يتيح للمستخدم استعراض
-الرحلات والاطلاع على معلومات السفر والتنقل بين شاشات التطبيق بسهولة.
-</p>
-
-<div class="tags">
-<span class="tag">Balsamiq</span>
-<span class="tag">Figma</span>
-<span class="tag">UI/UX</span>
-<span class="tag">Prototype</span>
+<div class="section-heading">
+    <div class="icon">🏢</div>
+    <h2>جهة التدريب</h2>
+    <p>نبذة عن المؤسسة وطبيعة التدريب</p>
 </div>
 
-<a class="button"
-href="https://www.figma.com/design/hZdm4lITnttxwvNJLcpBpF/Task1-marah?node-id=0-1&t=XLfdHzT20Mn8N1Tv-1"
-target="_blank">
-عرض المشروع
-</a>
-</div>
+<div class="about-box">
+    <h3>مركز فلسطين للصدمة – بريطانيا</h3>
 
-<div class="project">
-<h3><span class="number">2</span>منصة التعليم الإلكتروني</h3>
-
-<p>
-تصميم واجهات تطبيق وموقع للتعليم الإلكتروني، يهدف إلى تسهيل
-استعراض الدورات التعليمية والوصول إلى المحتوى التعليمي.
-</p>
-
-<div class="tags">
-<span class="tag">Balsamiq</span>
-<span class="tag">Figma</span>
-<span class="tag">UI/UX</span>
-<span class="tag">Prototype</span>
-</div>
-
-<a class="button"
-href="https://www.figma.com/design/a9jSnF5usuHe7uxh0NgPpQ/Task2-marah?node-id=0-1&t=k3l9jsUvDXaAzQuw-1"
-target="_blank">
-عرض المشروع
-</a>
-</div>
-
-<div class="project">
-<h3><span class="number">3</span>موقع التسوق الإلكتروني</h3>
-
-<p>
-تصميم واجهات موقع متجر إلكتروني للتسوق، مع تنظيم المنتجات
-والأقسام وتسهيل عملية استعراض المنتجات والتنقل داخل المتجر.
-</p>
-
-<div class="tags">
-<span class="tag">Balsamiq</span>
-<span class="tag">Figma</span>
-<span class="tag">UI/UX</span>
-<span class="tag">Prototype</span>
-</div>
-
-<a class="button"
-href="https://www.figma.com/design/NSeLOYiKEPtuiD4H9N5j02/Task3-marah?node-id=2076-2&t=wnQbLx9sdlfJRI9B-1"
-target="_blank">
-عرض المشروع
-</a>
-</div>
-
-<div class="project">
-<h3><span class="number">4</span>تطبيق المطعم والطلبات</h3>
-
-<p>
-تصميم واجهات تطبيق للمطعم تتيح للمستخدم استعراض قائمة الطعام،
-واختيار الطلبات وتخصيصها بطريقة سهلة ومنظمة.
-</p>
-
-<div class="tags">
-<span class="tag">Balsamiq</span>
-<span class="tag">Figma</span>
-<span class="tag">UI/UX</span>
-<span class="tag">Prototype</span>
-</div>
-
-<a class="button"
-href="https://www.figma.com/design/KHkjE0hq04fhlyyKv1Tpvl/Task-4-marah?t=MX1nRahIy9aEtp08-1"
-target="_blank">
-عرض المشروع
-</a>
+    <p>
+    تم تنفيذ التدريب الميداني لدى مركز فلسطين للصدمة – بريطانيا،
+    بهدف اكتساب الخبرة العملية وتطوير المهارات في مجال تصميم
+    واجهات المستخدم وتجربة المستخدم، وتنفيذ المشاريع التطبيقية
+    باستخدام البرامج المتخصصة.
+    </p>
 </div>
 
 </div>
 </section>
 
-<!-- دراسة الحالة -->
+<!-- PLAN -->
+
+<section id="plan" style="background:#f1f6fb">
+<div class="section-container">
+
+<div class="section-heading">
+    <div class="icon">📝</div>
+    <h2>الخطة التدريبية</h2>
+    <p>الموضوعات والمهارات التي شملها التدريب</p>
+</div>
+
+<div class="plan-list">
+
+<div class="plan-item">
+    التعرف إلى بيئة التدريب وطبيعة العمل والمهام المطلوبة.
+</div>
+
+<div class="plan-item">
+    التعرف إلى مفاهيم واجهة المستخدم UI وتجربة المستخدم UX.
+</div>
+
+<div class="plan-item">
+    استخدام Balsamiq لإعداد الرسومات الأولية Sketches.
+</div>
+
+<div class="plan-item">
+    استخدام Figma لتحويل الرسومات إلى Wireframes.
+</div>
+
+<div class="plan-item">
+    تصميم الواجهات واختيار الألوان والخطوط والعناصر البصرية.
+</div>
+
+<div class="plan-item">
+    ربط الشاشات وإنشاء النماذج التفاعلية Prototype.
+</div>
+
+<div class="plan-item">
+    اختبار التصميم وتحسين تجربة المستخدم.
+</div>
+
+<div class="plan-item">
+    تنفيذ المشاريع وإعداد دراسة الحالة Case Study.
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- REPORTS -->
+
+<section id="reports">
+<div class="section-container">
+
+<div class="section-heading">
+    <div class="icon">📑</div>
+    <h2>التقارير التدريبية</h2>
+    <p>ملخص الأعمال والمهام التي تم تنفيذها</p>
+</div>
+
+<div class="cards">
+
+<div class="card report-card">
+    <div class="report-icon">🎨</div>
+    <h3>تصميم الواجهات</h3>
+    <p>
+    إعداد الرسومات الأولية باستخدام Balsamiq،
+    ثم تصميم الواجهات باستخدام Figma.
+    </p>
+</div>
+
+<div class="card report-card">
+    <div class="report-icon">🧩</div>
+    <h3>النماذج التفاعلية</h3>
+    <p>
+    ربط الشاشات وإعداد Prototype لتوضيح طريقة
+    التنقل بين واجهات التطبيقات.
+    </p>
+</div>
+
+<div class="card report-card">
+    <div class="report-icon">🔍</div>
+    <h3>اختبار تجربة المستخدم</h3>
+    <p>
+    مراجعة الواجهات وتجربة سهولة الاستخدام
+    والعمل على تحسين التصميم.
+    </p>
+</div>
+
+<div class="card report-card">
+    <div class="report-icon">📚</div>
+    <h3>التوثيق ودراسة الحالة</h3>
+    <p>
+    توثيق المشاريع وشرح المشكلة والتحديات
+    والخصائص وطريقة تنفيذ التصميم.
+    </p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" style="background:#f1f6fb">
+<div class="section-container">
+
+<div class="section-heading">
+    <div class="icon">💻</div>
+    <h2>المشاريع العملية</h2>
+    <p>المشاريع التي تم تنفيذها خلال التدريب الميداني</p>
+</div>
+
+<div class="cards">
+
+<div class="project-card">
+<div class="project-top">
+    <div class="project-icon">✈️</div>
+    <h3>مشروع حجز تذاكر الطيران</h3>
+</div>
+
+<div class="project-body">
+    <p>
+    تصميم واجهات تطبيق لحجز تذاكر الطيران،
+    يتيح للمستخدم استعراض الرحلات والاطلاع
+    على معلومات السفر والتنقل بين الشاشات.
+    </p>
+
+    <div class="tags">
+        <span class="tag">Balsamiq</span>
+        <span class="tag">Figma</span>
+        <span class="tag">UI/UX</span>
+        <span class="tag">Prototype</span>
+    </div>
+
+    <a class="project-link"
+    href="https://www.figma.com/design/hZdm4lITnttxwvNJLcpBpF/Task1-marah?node-id=0-1&t=XLfdHzT20Mn8N1Tv-1"
+    target="_blank">عرض المشروع</a>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-top">
+    <div class="project-icon">📚</div>
+    <h3>مشروع منصة التعليم الإلكتروني</h3>
+</div>
+
+<div class="project-body">
+    <p>
+    تصميم واجهات منصة تعليم إلكتروني وتطبيق
+    للتعلم والدورات، بهدف تسهيل الوصول إلى
+    المحتوى التعليمي واستعراض الدورات.
+    </p>
+
+    <div class="tags">
+        <span class="tag">Balsamiq</span>
+        <span class="tag">Figma</span>
+        <span class="tag">UI/UX</span>
+        <span class="tag">Prototype</span>
+    </div>
+
+    <a class="project-link"
+    href="https://www.figma.com/design/a9jSnF5usuHe7uxh0NgPpQ/Task2-marah?node-id=0-1&t=k3l9jsUvDXaAzQuw-1"
+    target="_blank">عرض المشروع</a>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-top">
+    <div class="project-icon">🛍️</div>
+    <h3>مشروع موقع التسوق الإلكتروني</h3>
+</div>
+
+<div class="project-body">
+    <p>
+    تصميم واجهات موقع متجر إلكتروني للتسوق،
+    مع تنظيم المنتجات والأقسام وتسهيل
+    استعراض المنتجات والتنقل داخل المتجر.
+    </p>
+
+    <div class="tags">
+        <span class="tag">Balsamiq</span>
+        <span class="tag">Figma</span>
+        <span class="tag">UI/UX</span>
+        <span class="tag">Prototype</span>
+    </div>
+
+    <a class="project-link"
+    href="https://www.figma.com/design/NSeLOYiKEPtuiD4H9N5j02/Task3-marah?node-id=2076-2&t=wnQbLx9sdlfJRI9B-1"
+    target="_blank">عرض المشروع</a>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-top">
+    <div class="project-icon">🍽️</div>
+    <h3>مشروع تطبيق المطعم والطلبات</h3>
+</div>
+
+<div class="project-body">
+    <p>
+    تصميم واجهات تطبيق للمطعم تتيح للمستخدم
+    استعراض قائمة الطعام واختيار الطلبات
+    وتخصيصها بطريقة سهلة ومنظمة.
+    </p>
+
+    <div class="tags">
+        <span class="tag">Balsamiq</span>
+        <span class="tag">Figma</span>
+        <span class="tag">UI/UX</span>
+        <span class="tag">Prototype</span>
+    </div>
+
+    <a class="project-link"
+    href="https://www.figma.com/design/KHkjE0hq04fhlyyKv1Tpvl/Task-4-marah?t=MX1nRahIy9aEtp08-1"
+    target="_blank">عرض المشروع</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CASE STUDY -->
+
 <section id="case">
-<h2>دراسة الحالة (Case Study)</h2>
+<div class="section-container">
 
-<p>
-تضمنت المرحلة الختامية إعداد دراسة حالة باستخدام Figma،
-من خلال عرض الشاشات الخاصة بأحد المشاريع السابقة وتوضيح
-المشكلة التي يعالجها المشروع، والتحديات التي واجهت عملية التصميم،
-وأبرز الخصائص والميزات، ووصف خطوات العمل، مع تقديم نبذة عن المصممة.
-</p>
+<div class="section-heading">
+    <div class="icon">📖</div>
+    <h2>دراسة الحالة</h2>
+    <p>Case Study</p>
+</div>
 
-<div class="note">
-تهدف دراسة الحالة إلى توثيق مراحل التفكير والتصميم،
-وتوضيح كيفية الوصول إلى الحل التصميمي النهائي.
+<div class="about-box">
+    <p>
+    تضمنت المرحلة الختامية إعداد دراسة حالة باستخدام Figma،
+    من خلال عرض الشاشات الخاصة بأحد المشاريع السابقة،
+    وشرح المشكلة التي يعالجها المشروع والتحديات التي ظهرت
+    أثناء التصميم، وأبرز الخصائص والميزات، ووصف خطوات العمل
+    مع تقديم نبذة عن المصممة.
+    </p>
+</div>
+
 </div>
 </section>
 
-<!-- المهارات -->
-<section id="skills">
-<h2>المهارات المكتسبة</h2>
+<!-- SKILLS -->
 
-<div class="tags">
-<span class="tag">أساسيات UI/UX</span>
-<span class="tag">Balsamiq</span>
-<span class="tag">Figma</span>
-<span class="tag">Sketches</span>
-<span class="tag">Wireframes</span>
-<span class="tag">Prototype</span>
-<span class="tag">تصميم واجهات المستخدم</span>
-<span class="tag">تحسين تجربة المستخدم</span>
-<span class="tag">اختبار التصميم</span>
-<span class="tag">توثيق المشاريع</span>
+<section id="skills" style="background:#f1f6fb">
+<div class="section-container">
+
+<div class="section-heading">
+    <div class="icon">⭐</div>
+    <h2>المهارات المكتسبة</h2>
+    <p>المهارات التقنية والشخصية التي تم تطويرها</p>
+</div>
+
+<div class="cards">
+
+<div class="skill">
+    <div class="skill-icon">🎨</div>
+    <h3>تصميم واجهات المستخدم UI</h3>
+</div>
+
+<div class="skill">
+    <div class="skill-icon">👥</div>
+    <h3>تجربة المستخدم UX</h3>
+</div>
+
+<div class="skill">
+    <div class="skill-icon">🖌️</div>
+    <h3>Balsamiq</h3>
+</div>
+
+<div class="skill">
+    <div class="skill-icon">🖥️</div>
+    <h3>Figma</h3>
+</div>
+
+<div class="skill">
+    <div class="skill-icon">📐</div>
+    <h3>Wireframes</h3>
+</div>
+
+<div class="skill">
+    <div class="skill-icon">🔗</div>
+    <h3>Prototype</h3>
+</div>
+
+<div class="skill">
+    <div class="skill-icon">🔍</div>
+    <h3>اختبار وتحسين التصميم</h3>
+</div>
+
+<div class="skill">
+    <div class="skill-icon">📁</div>
+    <h3>تنظيم وتوثيق المشاريع</h3>
+</div>
+
+</div>
 </div>
 </section>
 
-<!-- التقييم -->
+<!-- EVALUATION -->
+
 <section id="evaluation">
-<h2>تقييم التدريب الميداني</h2>
+<div class="section-container">
 
-<div class="table-wrap">
+<div class="section-heading">
+    <div class="icon">📊</div>
+    <h2>تقييم التدريب الميداني</h2>
+    <p>ملخص عناصر التقييم والدرجات</p>
+</div>
+
+<div class="table-wrapper">
 <table>
 
 <thead>
 <tr>
-<th>عناصر التقييم</th>
-<th>العلامة القصوى</th>
-<th>العلامة</th>
+    <th>عناصر التقييم</th>
+    <th>العلامة القصوى</th>
+    <th>العلامة</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-<td>الالتزام بالحضور</td>
-<td>4</td>
-<td>4</td>
+    <td>الالتزام بالحضور</td>
+    <td>4</td>
+    <td>4</td>
 </tr>
 
 <tr>
-<td>فهم طبيعة عمل المؤسسة</td>
-<td>4</td>
-<td>4</td>
+    <td>فهم طبيعة عمل المؤسسة</td>
+    <td>4</td>
+    <td>4</td>
 </tr>
 
 <tr>
-<td>إنجاز المهام بالطريقة والوقت المطلوبين</td>
-<td>5</td>
-<td>4</td>
+    <td>إنجاز المهام بالطريقة والوقت المطلوبين</td>
+    <td>5</td>
+    <td>4</td>
 </tr>
 
 <tr>
-<td>الالتزام بإجراءات السلامة</td>
-<td>4</td>
-<td>4</td>
+    <td>الالتزام بإجراءات السلامة</td>
+    <td>4</td>
+    <td>4</td>
 </tr>
 
 <tr>
-<td>العمل بروح الفريق</td>
-<td>5</td>
-<td>5</td>
+    <td>العمل بروح الفريق</td>
+    <td>5</td>
+    <td>5</td>
 </tr>
 
 <tr>
-<td>الإبداع</td>
-<td>4</td>
-<td>4</td>
+    <td>الإبداع</td>
+    <td>4</td>
+    <td>4</td>
 </tr>
 
 <tr>
-<td>السلوك والانضباط</td>
-<td>4</td>
-<td>4</td>
+    <td>السلوك والانضباط</td>
+    <td>4</td>
+    <td>4</td>
 </tr>
 
-<tr class="total">
-<td>المجموع</td>
-<td>30</td>
-<td>29</td>
+<tr class="total-row">
+    <td>المجموع</td>
+    <td>30</td>
+    <td>29</td>
 </tr>
+
 </tbody>
-
 </table>
+</div>
+
 </div>
 </section>
 
-<!-- الخاتمة -->
-<section id="conclusion">
-<h2>ملخص تجربة التدريب الميداني</h2>
+<!-- CONCLUSION -->
+
+<section id="conclusion" style="background:#f1f6fb">
+<div class="section-container">
+
+<div class="section-heading">
+    <div class="icon">🌷</div>
+    <h2>الخاتمة</h2>
+    <p>ملخص تجربة التدريب الميداني</p>
+</div>
+
+<div class="conclusion-box">
+
+<h3>ملخص تجربة التدريب الميداني</h3>
 
 <p>
 ساهم التدريب الميداني في تعزيز الجانب العملي للمعرفة الأكاديمية،
@@ -684,14 +1011,34 @@ target="_blank">
 التصميمي وحل المشكلات وتنظيم العمل، والتعرف إلى أهمية فهم
 احتياجات المستخدم وتقديم تجربة استخدام واضحة وسهلة.
 </p>
+
+</div>
+</div>
 </section>
 
-</main>
+<!-- CONTACT -->
+
+<section id="contact">
+<div class="section-container">
+
+<div class="section-heading">
+    <div class="icon">📩</div>
+    <h2>التواصل</h2>
+    <p>بيانات الطالبة</p>
+</div>
+
+<div class="about-box">
+    <h3>مرح أحمد محمد أبو الطرابيش</h3>
+    <p>جامعة الأقصى – علم الحاسوب</p>
+    <p>التدريب الميداني 2026–2027</p>
+</div>
+
+</div>
+</section>
 
 <footer>
-ملف الإنجاز الأكاديمي والتدريب الميداني
-<br>
-مرح أحمد محمد أبو الطرابيش – جامعة الأقصى – 2026
+    <p>ملف الإنجاز الأكاديمي والتدريب الميداني</p>
+    <p>مرح أحمد محمد أبو الطرابيش © 2026</p>
 </footer>
 
 </body>
